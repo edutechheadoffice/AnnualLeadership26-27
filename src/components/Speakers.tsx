@@ -4,70 +4,160 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { User, BookOpen } from "lucide-react";
 
-interface Speaker {
+export interface Speaker {
   id: string;
   name: string;
   jobTitle: string;
   topic: string;
   imageUrl?: string;
+  imagePosition?: string; // misalnya: "top", "bottom", "center", atau "0% 20%"
+  flipHorizontal?: boolean;
+  imageScale?: number;
 }
 
-const day1Speakers: Speaker[] = [
+export const day1Speakers: Speaker[] = [
   {
     id: "d1-1",
-    name: "Deny Kiswanto Sinaga",
-    jobTitle: "Executive Director for PHG Cluster 2",
-    topic: "Unified Leadership in Education",
-    imageUrl: "Deny Kiswanto Sinaga (7).jpg",
+    name: "dr. Stephanie Riady",
+    jobTitle: "Executive Director",
+    topic: "Faithful Leadership for a Growing Mission: PHG & SDH: Where We Stand, Where We Are Going, What We Will and Will Not Pursue",
+    imageUrl: "1712070861955.jpeg",
   },
   {
     id: "d1-2",
+    name: "Rev. Dr. Yohanes Halim",
+    jobTitle: "Senior Pastor of Christ Chapel Karawaci",
+    topic: "Interactive Biblical Exposition: What Does It Mean to Be Alive in Christ?",
+    imageUrl: "YH2-scaled.jpg",
+    flipHorizontal: true,
+  },
+  {
+    id: "d1-3",
+    name: "Deny Kiswanto Sinaga",
+    jobTitle: "Executive Director",
+    topic: "Faithful Leadership for a Growing Mission: PHG & SDH: Where We Stand, Where We Are Going, What We Will and Will Not Pursue",
+    imageUrl: "DSC09905-HD.jpg",
+    imagePosition: "top", // diatur atas
+  },
+  {
+    id: "d1-4",
+    name: "Wilik Chen",
+    jobTitle: "Vice Executive Director",
+    topic: "Application Workshop: Where Does the Theme Live in Our Schools?",
+    imageUrl: "HoS DM Wilik_edited_edited.avif",
+    imagePosition: "top",
+    flipHorizontal: true,
+  },
+  {
+    id: "d1-5",
     name: "Alvin Wijaya",
     jobTitle: "School System Coordinator of SDH",
-    topic: "Pedagogical Innovation",
-    imageUrl: "Alvin Wijaya (2).jpg",
+    topic: "Leadership Charge: We Do Not Teach This Theme. We Live It.",
+    imageUrl: "DSC09339.jpg",
+    imagePosition: "top",
   },
 ];
 
-const day2Speakers: Speaker[] = [
-  {
-    id: "d2-1",
-    name: "Alvin Pardomuan Sebastian",
-    jobTitle: "Educational Technology Supervisor",
-    topic: "Visionary Christian Leadership",
-    imageUrl: "",
-  },
+export const day2Speakers: Speaker[] = [
   {
     id: "d2-2",
-    name: "Obed Tegar Kristiawan",
-    jobTitle: "Educational Technology Specialist",
-    topic: "Digital Integration",
-    imageUrl: "https://i.pravatar.cc/300?u=edtech",
+    name: "Pdt. Ferry Pasang",
+    jobTitle: "Senior Pastor Christ Chapel Kupang",
+    topic: "Fragile, Fallen, and Held — The Leader Who Needs Grace (2 Corinthians 12:9-10)",
+    imageUrl: "https://www.gprii.org/wp-content/uploads/2025/01/3.jpg"
+  },
+  {
+    id: "d2-1",
+    name: "Alfa Sritosa Citra",
+    jobTitle: "Elders at Christ Chapel Karawaci",
+    topic: "Guarding the Leader: Fragility, Shadow Mission, and the Biblical Safeguards",
+    imageUrl: "ACS-scaled.jpg",
+    flipHorizontal: true,
   },
   {
     id: "d2-3",
-    name: "Nico Nainggolan",
-    jobTitle: "Educational Technology Specialist",
-    topic: "Level Synergy",
-    imageUrl: "https://i.pravatar.cc/300?u=subject",
+    name: "Deny Kiswanto Sinaga",
+    jobTitle: "Executive Director",
+    topic: "SDH Growth Map  — 3-Year Growth Trajectory",
+    imageUrl: "DSC09905-HD.jpg",
+    imagePosition: "top",
+  },
+  {
+    id: "d2-4",
+    name: "Alvin Wijaya",
+    jobTitle: "School System Coordinator of SDH",
+    topic: "KPI as Mission Narrative\n & KPI Exploration & School Action Planning — From Understanding to Ownership",
+    imageUrl: "DSC09339.jpg",
+    imagePosition: "top",
+  },
+  {
+    id: "d2-5",
+    name: "Fickle Firland",
+    jobTitle: "Head of Marketing Department",
+    topic: "KPI as Mission Narrative",
+    imageUrl: "DSC09759.jpg",
+    imagePosition: "top",
+  },
+  {
+    id: "d2-6",
+    name: "Tirza Widjonarko",
+    jobTitle: "Head of Academic Department",
+    topic: "KPI as Mission Narrative",
+    imageUrl: "20250916_001848506_iOS.jpg",
+    imagePosition: "center",
+    flipHorizontal: true,
+    imageScale: 1.2,
+  },
+  {
+    id: "d2-6",
+    name: "Geoffrey Gregorio",
+    jobTitle: "Head of FM Department",
+    topic: "KPI as Mission Narrative",
+    imageUrl: "DSC09781.jpg",
+    imagePosition: "top",
   },
 ];
 
-const day3Speakers: Speaker[] = [
+export const day3Speakers: Speaker[] = [
   {
     id: "d3-1",
-    name: "Regional Teams",
-    jobTitle: "Branch Managers",
-    topic: "Group Presentations & Action Plans",
-    imageUrl: "https://i.pravatar.cc/300?u=regional",
+    name: "Pdt. Williem Ferdinandus",
+    jobTitle: "Senior Pastor of Christ Chapel Manado",
+    topic: "We Are Unworthy Servants — Soli Deo Gloria (Luke 17:10)",
+    imageUrl: "Ps.-Williem-Ferdinandus-2048x2048.webp",
   },
   {
     id: "d3-2",
-    name: "Executive Committee",
-    jobTitle: "Board of Directors",
-    topic: "Commissioning & Closing Address",
-    imageUrl: "https://i.pravatar.cc/300?u=executive",
+    name: "Rifena Kurniawan",
+    jobTitle: "Acting Head of School SDH Lippo Village",
+    topic: "Learning from Each Other — School Stories That Inspire",
+    imageUrl: "https://media.licdn.com/dms/image/v2/D5603AQEUW78Itz8WqQ/profile-displayphoto-crop_800_800/B56ZgjHE3dH0AM-/0/1752935715514?e=1783555200&v=beta&t=9675OBu8nQWyFiG7_2CWkf9wSbDBl_Kzd41QBaR71bQ",
+    flipHorizontal: true,
   },
+  {
+    id: "d3-3",
+    name: "Aditya Wiranata Sapang",
+    jobTitle: "Principal Coordinator of SDH Sentul",
+    topic: "Learning from Each Other — School Stories That Inspire",
+    imageUrl: "https://media.licdn.com/dms/image/v2/C5603AQGpiedsd4e3AA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1615163342710?e=1783555200&v=beta&t=mTuZc0YjNWIUhvk0_U4snasRrJSt7SftXi7EIVZCbTg",
+    flipHorizontal: true,
+  },
+  {
+    id: "d3-4",
+    name: "Nathanael Febrian",
+    jobTitle: "Head of School SDH Cikarang",
+    topic: "Learning from Each Other — School Stories That Inspire",
+    imageUrl: "",
+    flipHorizontal: true,
+  },
+  {
+    id: "d3-5",
+    name: "Alvin Wijaya",
+    jobTitle: "School System Coordinator of SDH",
+    topic: "Information & Updates: T&S Handbook, NTI/RTI, Lumina, and Operational Updates",
+    imageUrl: "DSC09339.jpg",
+    imagePosition: "top",
+  }
 ];
 
 const days = [
@@ -75,6 +165,8 @@ const days = [
   { id: "day2", label: "Day 02", speakers: day2Speakers },
   { id: "day3", label: "Day 03", speakers: day3Speakers },
 ];
+
+export const allSpeakers = [...day1Speakers, ...day2Speakers, ...day3Speakers];
 
 export default function Speakers() {
   const [activeDay, setActiveDay] = useState("day1");
@@ -94,7 +186,7 @@ export default function Speakers() {
             viewport={{ once: true }}
             className="text-sm font-bold uppercase tracking-[0.25em] text-brand-orange"
           >
-            Featured Voices
+            Featured Keynotes
           </motion.h2>
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
@@ -154,12 +246,19 @@ export default function Speakers() {
                   className="bg-brand-cream border border-brand-blue-light/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
                 >
                   {/* Image Placeholder */}
-                  <div className="w-full h-56 bg-gradient-to-br from-brand-blue-dark/5 to-brand-blue-light/20 flex items-center justify-center relative overflow-hidden">
+                  <div className="w-full h-96 bg-gradient-to-br from-brand-blue-dark/5 to-brand-blue-light/20 flex items-center justify-center relative overflow-hidden">
                     {speaker.imageUrl ? (
                       <img
                         src={speaker.imageUrl}
                         alt={speaker.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-cover transition-transform duration-500"
+                        style={{
+                          objectPosition: speaker.imagePosition || "center",
+                          transform: speaker.flipHorizontal
+                            ? "scaleX(-1)"
+                            : undefined,
+                          scale: speaker.imageScale || 1,
+                        }}
                       />
                     ) : (
                       <User className="w-20 h-20 text-brand-blue-dark/10 group-hover:scale-110 transition-transform duration-500" />

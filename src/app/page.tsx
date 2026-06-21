@@ -8,6 +8,10 @@ import Hero from "@/components/Hero";
 import Gallery from "@/components/Gallery";
 import Footer from "@/components/Footer";
 import Invitation from "@/components/Invitation";
+import Rundown from "@/components/Rundown";
+import Speakers from "@/components/Speakers";
+import EventGuidelines from "@/components/EventGuidelines";
+import AffiliatedSchools from "@/components/AffiliatedSchools";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -98,7 +102,11 @@ export default function Home() {
             {/* Content Sections Wrapper */}
             <main className="flex-grow">
               <Hero />
+              <AffiliatedSchools />
               <Invitation />
+              <Rundown />
+              <Speakers />
+              <EventGuidelines />
             </main>
 
             {/* Brand Footer */}

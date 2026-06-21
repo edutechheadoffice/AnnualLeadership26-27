@@ -30,9 +30,7 @@ export default function AffiliatedSchools() {
                     viewport={{ once: true }}
                     className="text-center mb-10"
                 >
-                    <p className="text-lg uppercase tracking-[0.35em] text-brand-text-muted font-semibold">
-                        PELITA HARAPAN GROUP - CLUSTER 2 SCHOOLS
-                    </p>
+
                 </motion.div>
 
                 {/* Logo Row */}

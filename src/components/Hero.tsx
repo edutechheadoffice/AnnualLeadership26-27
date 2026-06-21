@@ -127,7 +127,16 @@ export default function Hero() {
               variants={titleWordVariants}
               className="text-6xl sm:text-8xl md:text-9xl font-bebas text-brand-blue-dark leading-[0.85] uppercase tracking-wide select-none"
             >
-              Annual Leadership
+              Annual
+            </motion.h1>
+          </div>
+
+          <div className="overflow-hidden mb-4">
+            <motion.h1
+              variants={titleWordVariants}
+              className="text-6xl sm:text-8xl md:text-9xl font-bebas text-brand-blue-dark leading-[0.85] uppercase tracking-wide select-none"
+            >
+              Leadership
             </motion.h1>
           </div>
 
