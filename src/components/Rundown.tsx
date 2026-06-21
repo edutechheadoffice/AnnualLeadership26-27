@@ -310,11 +310,31 @@ export default function Rundown() {
                     className={`flex flex-col md:flex-row items-stretch relative ${isEven ? "md:flex-row-reverse" : ""
                       }`}
                   >
-                    {/* Time Label on one side */}
+                    {/* Time Label on one side - Desktop: Premium Glowing Badge */}
                     <div className={`hidden md:flex w-full md:w-1/2 items-center px-12 mb-4 md:mb-0 ${isEven ? "justify-start" : "justify-end"}`}>
-                      <div className="flex items-center gap-2 font-mono text-lg text-brand-text-dark font-semibold">
-                        <Clock className="w-5 h-5" />
-                        {session.time}
+                      <div className="relative group/time">
+                        {/* Glow effect */}
+                        <div className="absolute -inset-1 bg-gradient-to-r from-brand-blue-light/30 via-brand-blue/20 to-brand-orange/20 rounded-2xl blur-sm opacity-60 group-hover/time:opacity-100 transition-opacity duration-300" />
+                        <div className="relative flex items-center gap-3 bg-gradient-to-br from-brand-blue-dark to-brand-blue px-5 py-3 rounded-2xl shadow-lg shadow-brand-blue-dark/20">
+                          {/* Clock Icon with pulse ring */}
+                          <div className="relative">
+                            <div className="absolute inset-0 rounded-full bg-brand-yellow-bright/30 animate-ping scale-150" />
+                            <div className="relative bg-brand-yellow-bright/20 p-1.5 rounded-full">
+                              <Clock className="w-4 h-4 text-brand-yellow-bright" />
+                            </div>
+                          </div>
+                          {/* Split time display */}
+                          <div className="flex items-center gap-1.5">
+                            {session.time.split(" - ").map((t, i) => (
+                              <React.Fragment key={i}>
+                                {i > 0 && (
+                                  <span className="text-brand-white/40 text-sm">→</span>
+                                )}
+                                <span className="font-bold text-brand-white text-base tracking-widest">{t}</span>
+                              </React.Fragment>
+                            ))}
+                          </div>
+                        </div>
                       </div>
                     </div>
 
@@ -332,10 +352,10 @@ export default function Rundown() {
 
                         <div className="relative z-10">
                           <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
-                            {/* Mobile Time Label */}
-                            <div className="flex md:hidden items-center gap-2 font-mono text-sm text-brand-text-dark font-semibold">
-                              <Clock className="w-4 h-4" />
-                              {session.time}
+                            {/* Mobile Time Label - Compact Premium Badge */}
+                            <div className="flex md:hidden items-center gap-2 bg-gradient-to-r from-brand-blue-dark to-brand-blue px-3 py-1.5 rounded-xl shadow-sm shadow-brand-blue-dark/20 mb-1">
+                              <Clock className="w-3 h-3 text-brand-yellow-bright shrink-0" />
+                              <span className="font-mono text-xs font-bold text-brand-white tracking-wider">{session.time}</span>
                             </div>
                           </div>
 

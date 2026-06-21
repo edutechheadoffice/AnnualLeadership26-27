@@ -61,13 +61,15 @@ export default function EventGuidelines() {
 
                 <h5 className="font-bold text-brand-text-dark text-lg uppercase tracking-wider mb-1">Day 1</h5>
                 <p className="text-brand-text-muted font-medium mb-6">Batik</p>
-                <div className="relative w-full flex-1 min-h-[200px] rounded-2xl bg-gradient-to-b from-brand-cream/50 to-transparent overflow-hidden flex items-center justify-center p-6 group-hover:bg-brand-cream transition-colors duration-500">
-                  <Image
-                    src="/images/batik.png"
-                    alt="Batik Shirt"
-                    fill
-                    className="object-contain drop-shadow-lg group-hover:scale-110 transition-transform duration-500 origin-bottom"
-                  />
+                <div className="relative w-full flex-1 min-h-[220px] rounded-2xl overflow-hidden flex items-end justify-center bg-gradient-to-b from-brand-orange/5 via-brand-cream to-brand-orange/20">
+                  <div className="relative w-full h-full">
+                    <Image
+                      src="/images/batik.png"
+                      alt="Batik Shirt"
+                      fill
+                      className="object-contain transition-transform duration-500 group-hover:scale-110 origin-bottom"
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -76,13 +78,15 @@ export default function EventGuidelines() {
 
                 <h5 className="font-bold text-brand-text-dark text-lg uppercase tracking-wider mb-1">Day 2</h5>
                 <p className="text-brand-text-muted font-medium mb-6">Raker shirt <span className="block text-sm text-brand-blue-light font-normal italic mt-1">(will be provided)</span></p>
-                <div className="relative w-full flex-1 min-h-[200px] rounded-2xl bg-gradient-to-b from-brand-cream/50 to-transparent overflow-hidden flex items-center justify-center p-6 group-hover:bg-brand-cream transition-colors duration-500">
-                  <Image
-                    src="/images/raker-shirt.png"
-                    alt="Raker Polo Shirt"
-                    fill
-                    className="object-contain drop-shadow-lg group-hover:scale-110 transition-transform duration-500 origin-bottom"
-                  />
+                <div className="relative w-full flex-1 min-h-[220px] rounded-2xl overflow-hidden flex items-end justify-center bg-gradient-to-b from-brand-blue-light/5 via-brand-cream to-brand-blue-light/20">
+                  <div className="relative w-full h-full">
+                    <Image
+                      src="/images/raker-shirt.png"
+                      alt="Raker Polo Shirt"
+                      fill
+                      className="object-contain transition-transform duration-500 group-hover:scale-110 origin-bottom"
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -91,13 +95,15 @@ export default function EventGuidelines() {
 
                 <h5 className="font-bold text-brand-text-dark text-lg uppercase tracking-wider mb-1">Day 3</h5>
                 <p className="text-brand-text-muted font-medium mb-6">Smart Casual</p>
-                <div className="relative w-full flex-1 min-h-[200px] rounded-2xl bg-gradient-to-b from-brand-cream/50 to-transparent overflow-hidden flex items-center justify-center p-6 group-hover:bg-brand-cream transition-colors duration-500">
-                  <Image
-                    src="/images/smart-casual.png"
-                    alt="Smart Casual Outfit"
-                    fill
-                    className="object-contain drop-shadow-lg group-hover:scale-110 transition-transform duration-500 origin-bottom"
-                  />
+                <div className="relative w-full flex-1 min-h-[220px] rounded-2xl overflow-hidden flex items-end justify-center bg-gradient-to-b from-brand-yellow/5 via-brand-cream to-brand-yellow/20">
+                  <div className="relative w-full h-full">
+                    <Image
+                      src="/images/smart-casual.png"
+                      alt="Smart Casual Outfit"
+                      fill
+                      className="object-contain transition-transform duration-500 group-hover:scale-110 origin-bottom"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

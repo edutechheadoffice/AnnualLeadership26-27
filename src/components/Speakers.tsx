@@ -109,7 +109,7 @@ export const day2Speakers: Speaker[] = [
     imageScale: 1.2,
   },
   {
-    id: "d2-6",
+    id: "d2-7",
     name: "Geoffrey Gregorio",
     jobTitle: "Head of FM Department",
     topic: "KPI as Mission Narrative",

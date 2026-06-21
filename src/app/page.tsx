@@ -12,6 +12,8 @@ import Rundown from "@/components/Rundown";
 import Speakers from "@/components/Speakers";
 import EventGuidelines from "@/components/EventGuidelines";
 import AffiliatedSchools from "@/components/AffiliatedSchools";
+import VenueMap from "@/components/VenueMap";
+import Venue from "@/components/Venue";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -107,6 +109,7 @@ export default function Home() {
               <Rundown />
               <Speakers />
               <EventGuidelines />
+              <Venue />
             </main>
 
             {/* Brand Footer */}

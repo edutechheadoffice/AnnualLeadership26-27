@@ -12,7 +12,7 @@ export default function Venue() {
       <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-brand-yellow/5 blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        
+
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
           <motion.h2
@@ -37,7 +37,7 @@ export default function Venue() {
 
         {/* Content Layout Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          
+
           {/* Glassmorphic Info Card */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -51,13 +51,13 @@ export default function Venue() {
                 <Building className="w-3.5 h-3.5" />
                 Conference Venue
               </div>
-              
+
               <h4 className="text-3xl font-bebas text-brand-blue-dark tracking-wide uppercase mb-4">
                 Sekolah Dian Harapan Daan Mogot
               </h4>
-              
+
               <p className="text-sm text-brand-text-muted leading-relaxed mb-6">
-                The campus is strategically located in West Jakarta, designed with modern architecture and state-of-the-art academic facilities. The leadership meeting will be held across the Main Chapel, Hope Hall, and multiple collaborative breakout rooms.
+                The campus is strategically located in West Jakarta, designed with modern architecture and state-of-the-art academic facilities. The leadership meeting will be held across the Main Chapel.
               </p>
 
               <div className="space-y-4">
@@ -110,7 +110,7 @@ export default function Venue() {
           >
             {/* Soft inner shadow accent */}
             <div className="absolute inset-0 border border-brand-white/20 rounded-3xl pointer-events-none z-10" />
-            
+
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.8624647313885!2d106.72147367469733!3d-6.14917459383778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f8072049c303%3A0xe96c4b267155bbad!2sSekolah%20Dian%20Harapan%20Daan%20Mogot!5e0!3m2!1sen!2sid!4v1717056000000!5m2!1sen!2sid"
               className="w-full h-full border-0 rounded-3xl grayscale-[20%] contrast-[110%] group-hover:grayscale-0 transition-all duration-500"
