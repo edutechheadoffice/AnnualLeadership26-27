@@ -21,7 +21,7 @@ export const day1Speakers: Speaker[] = [
   {
     id: "d1-1",
     name: "Pdt. Deddy Simanjuntak",
-    jobTitle: "Pastor Christ Chapel Sentani",
+    jobTitle: "Pastor of Christ Chapel Sentani",
     topic: "A Community of Servants Called to Lead (Mark 10:43-35)",
     role: "Preacher",
     label: "Opening Service",
@@ -33,7 +33,7 @@ export const day1Speakers: Speaker[] = [
   {
     id: "d1-2",
     name: "dr. Stephanie Riady",
-    jobTitle: "Executive Director",
+    jobTitle: "Executive Director of PHG",
     topic: "Faithful Leadership for a Growing Mission: PHG & SDH: Where We Stand, Where We Are Going, What We Will and Will Not Pursue",
     role: "Speaker",
     imageUrl: "1712070861955.jpeg",
@@ -41,7 +41,7 @@ export const day1Speakers: Speaker[] = [
   {
     id: "d1-3",
     name: "Rev. Dr. Yohanes Halim",
-    jobTitle: "Senior Pastor Christ Chapel Karawaci",
+    jobTitle: "Senior Pastor of Christ Chapel Karawaci",
     topic: "Interactive Biblical Exposition: What Does It Mean to Be Alive in Christ?",
     role: "Speaker",
     imageUrl: "YH2-scaled.jpg",
@@ -50,7 +50,7 @@ export const day1Speakers: Speaker[] = [
   {
     id: "d1-4",
     name: "Deny Kiswanto Sinaga",
-    jobTitle: "Executive Director",
+    jobTitle: "Executive Director of Cluster 2",
     topic: "Faithful Leadership for a Growing Mission: PHG & SDH: Where We Stand, Where We Are Going, What We Will and Will Not Pursue",
     role: "Speaker",
     imageUrl: "DSC09905-HD.jpg",
@@ -59,7 +59,7 @@ export const day1Speakers: Speaker[] = [
   {
     id: "d1-5",
     name: "Wilik Chen",
-    jobTitle: "Vice Executive Director",
+    jobTitle: "Vice Executive Director of Cluster 2",
     topic: "Application Workshop: Where Does the Theme Live in Our Schools?",
     role: "Speaker",
     imageUrl: "HoS DM Wilik_edited_edited.avif",
@@ -69,7 +69,7 @@ export const day1Speakers: Speaker[] = [
   {
     id: "d1-6",
     name: "Alvin Wijaya",
-    jobTitle: "SDH School System Coordinator",
+    jobTitle: "School System Coordinator of SDH",
     topic: "Leadership Charge: We Do Not Teach This Theme. We Live It.",
     role: "Speaker",
     imageUrl: "DSC09339.jpg",
@@ -81,7 +81,7 @@ export const day2Speakers: Speaker[] = [
   {
     id: "d2-2",
     name: "Pdt. Ferry Pasang",
-    jobTitle: "Senior Pastor Christ Chapel Kupang",
+    jobTitle: "Pastor of Christ Chapel Kupang",
     label: "Devotion",
     topic: "Fragile, Fallen, and Held — The Leader Who Needs Grace (2 Corinthians 12:9-10)",
     role: "Preacher",
@@ -90,7 +90,7 @@ export const day2Speakers: Speaker[] = [
   {
     id: "d2-1",
     name: "Alfa Sritosa Citra",
-    jobTitle: "Elder Christ Chapel Karawaci",
+    jobTitle: "Pastor of Christ Chapel Karawaci",
     topic: "Guarding the Leader: Fragility, Shadow Mission, and the Biblical Safeguards",
     role: "Speaker",
     imageUrl: "ACS-scaled.jpg",
@@ -99,7 +99,7 @@ export const day2Speakers: Speaker[] = [
   {
     id: "d2-3",
     name: "Deny Kiswanto Sinaga",
-    jobTitle: "Executive Director",
+    jobTitle: "Executive Director of CLuster 2",
     topic: "SDH Growth Map  — 3-Year Growth Trajectory",
     role: "Speaker",
     imageUrl: "DSC09905-HD.jpg",
@@ -108,7 +108,7 @@ export const day2Speakers: Speaker[] = [
   {
     id: "d2-4",
     name: "Alvin Wijaya",
-    jobTitle: "SDH School System Coordinator",
+    jobTitle: "School System Coordinator of SDH",
     topic: "KPI as Mission Narrative\n & KPI Exploration & School Action Planning — From Understanding to Ownership",
     role: "Speaker",
     imageUrl: "DSC09339.jpg",
@@ -129,7 +129,7 @@ export const day3Speakers: Speaker[] = [
   {
     id: "d3-2",
     name: "Rifena Kurniawan",
-    jobTitle: "Acting Head of School SDH Lippo Village",
+    jobTitle: "Acting Head of School of SDH Lippo Village",
     topic: "Learning from Each Other — School Stories That Inspire",
     role: "Speaker",
     imageUrl: "https://media.licdn.com/dms/image/v2/D5603AQEUW78Itz8WqQ/profile-displayphoto-crop_800_800/B56ZgjHE3dH0AM-/0/1752935715514?e=1783555200&v=beta&t=9675OBu8nQWyFiG7_2CWkf9wSbDBl_Kzd41QBaR71bQ",
@@ -138,7 +138,7 @@ export const day3Speakers: Speaker[] = [
   {
     id: "d3-3",
     name: "Aditya Wiranata Sapang",
-    jobTitle: "Principal Coordinator SDH Sentul",
+    jobTitle: "Principal Coordinator of SDH Sentul",
     topic: "Learning from Each Other — School Stories That Inspire",
     role: "Speaker",
     imageUrl: "https://media.licdn.com/dms/image/v2/C5603AQGpiedsd4e3AA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1615163342710?e=1783555200&v=beta&t=mTuZc0YjNWIUhvk0_U4snasRrJSt7SftXi7EIVZCbTg",
@@ -147,7 +147,7 @@ export const day3Speakers: Speaker[] = [
   {
     id: "d3-4",
     name: "Nathanael Febrian",
-    jobTitle: "Head of School SDH Cikarang",
+    jobTitle: "Head of School of SDH Cikarang",
     topic: "Learning from Each Other — School Stories That Inspire",
     role: "Speaker",
     imageUrl: "",
