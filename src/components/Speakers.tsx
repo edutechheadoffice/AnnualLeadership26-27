@@ -33,7 +33,7 @@ export const day1Speakers: Speaker[] = [
   {
     id: "d1-2",
     name: "dr. Stephanie Riady",
-    jobTitle: "Executive Director of PHG",
+    jobTitle: "Executive Director of Pelita Harapan Group",
     topic: "Faithful Leadership for a Growing Mission: PHG & SDH: Where We Stand, Where We Are Going, What We Will and Will Not Pursue",
     role: "Speaker",
     imageUrl: "1712070861955.jpeg",
