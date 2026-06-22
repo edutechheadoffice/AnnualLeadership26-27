@@ -104,7 +104,7 @@ function CaptionSequence() {
       }, 600);
     };
 
-    const timer = setInterval(cycle, 3000);
+    const timer = setInterval(cycle, 1100);
     return () => clearInterval(timer);
   }, []);
 
@@ -174,8 +174,8 @@ function ImageCarousel() {
       setTimeout(() => {
         setCurrentIndex((prev) => (prev + 1) % PRELOADER_IMAGES.length);
         setTransitioning(false);
-      }, 1200);
-    }, 3000);
+      }, 300);
+    }, 400);
     return () => clearInterval(timer);
   }, [currentIndex]);
 
@@ -202,26 +202,7 @@ function ImageCarousel() {
         </motion.div>
       </AnimatePresence>
 
-      {/* Next image pre-loaded below */}
-      <AnimatePresence>
-        {transitioning && (
-          <motion.div
-            key={`img-next-${nextIndex}`}
-            className="absolute inset-0"
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 1, scale: 1.05 }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
-          >
-            <Image
-              src={PRELOADER_IMAGES[nextIndex]}
-              alt="Leadership meeting photo"
-              fill
-              className="object-cover object-center"
-              sizes="100vw"
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
+
 
       {/* Multi-layer overlays — deep navy brand-blue-dark */}
       <div className="absolute inset-0 z-10" style={{ background: "linear-gradient(to top, #0B2C67 0%, rgba(11,44,103,0.7) 40%, rgba(11,44,103,0.35) 100%)" }} />
@@ -292,7 +273,6 @@ function HexagonalAccent() {
 
 export default function Preloader({ onComplete }: PreloaderProps) {
   const [progress, setProgress] = useState(0);
-  const [showButton, setShowButton] = useState(false);
   const [exiting, setExiting] = useState(false);
 
   // Simulate loading progress
@@ -303,7 +283,13 @@ export default function Preloader({ onComplete }: PreloaderProps) {
     const tick = () => {
       if (current >= target) {
         setProgress(100);
-        setTimeout(() => setShowButton(true), 600);
+
+        // langsung fade out dan masuk ke halaman utama
+        setTimeout(() => {
+          setExiting(true);
+          setTimeout(onComplete, 900);
+        }, 300);
+
         return;
       }
 
@@ -320,11 +306,6 @@ export default function Preloader({ onComplete }: PreloaderProps) {
     const startDelay = setTimeout(tick, 400);
     return () => clearTimeout(startDelay);
   }, []);
-
-  const handleEnter = useCallback(() => {
-    setExiting(true);
-    setTimeout(onComplete, 900);
-  }, [onComplete]);
 
   return (
     <motion.div
@@ -455,55 +436,13 @@ export default function Preloader({ onComplete }: PreloaderProps) {
           transition={{ duration: 0.7, delay: 1.1 }}
           className="mt-32 flex flex-col items-center gap-4"
         >
-          <AnimatePresence mode="wait">
-            {!showButton ? (
-              <motion.div
-                key="progress"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.4 }}
-              >
-                <RoundedProgressBar progress={progress} />
-              </motion.div>
-            ) : (
-              <motion.div
-                key="button"
-                initial={{ opacity: 0, scale: 0.8, y: 10 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              >
-                {/* Button — brand yellow accent, Inter label */}
-                <button
-                  id="preloader-enter-btn"
-                  onClick={handleEnter}
-                  className="relative group px-10 py-3.5 font-sans text-xs uppercase tracking-[0.3em] font-semibold text-white transition-all duration-300 rounded-full"
-                  style={{
-                    border: `1px solid rgba(243,213,78,0.45)`,
-                    background: `transparent`,
-                    backdropFilter: "blur(10px)",
-                    WebkitBackdropFilter: "blur(10px)"
-
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLButtonElement).style.background = `rgba(243,213,78,0.16)`;
-                    (e.currentTarget as HTMLButtonElement).style.borderColor = `rgba(243,213,78,0.85)`;
-                    (e.currentTarget as HTMLButtonElement).style.boxShadow = `0 0 22px rgba(243,213,78,0.3), inset 0 0 20px rgba(243,213,78,0.06)`;
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLButtonElement).style.background = `rgba(243,213,78,0.07)`;
-                    (e.currentTarget as HTMLButtonElement).style.borderColor = `rgba(243,213,78,0.45)`;
-                    (e.currentTarget as HTMLButtonElement).style.boxShadow = "none";
-                  }}
-                >
-                  <span style={{ textShadow: `0 0 14px rgba(243,213,78,0.7)` }}>
-                    GO TO WEBSITE
-                  </span>
-                </button>
-
-              </motion.div>
-            )}
-          </AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
+          >
+            <RoundedProgressBar progress={progress} />
+          </motion.div>
         </motion.div>
       </div>
 

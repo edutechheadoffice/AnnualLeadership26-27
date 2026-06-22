@@ -19,13 +19,23 @@ export interface Speaker {
 export const day1Speakers: Speaker[] = [
   {
     id: "d1-1",
+    name: "Pdt. Deddy Simanjuntak",
+    jobTitle: "Pastor Christ Chapel Sentani",
+    topic: "A Community of Servants Called to Lead (Mark 10:43-35)",
+    imageUrl: "https://christchapelkarawaci.org/wp-content/uploads/2025/02/DS2-scaled.jpg",
+    imagePosition: "top",
+    flipHorizontal: true,
+  }
+  ,
+  {
+    id: "d1-2",
     name: "dr. Stephanie Riady",
     jobTitle: "Executive Director",
     topic: "Faithful Leadership for a Growing Mission: PHG & SDH: Where We Stand, Where We Are Going, What We Will and Will Not Pursue",
     imageUrl: "1712070861955.jpeg",
   },
   {
-    id: "d1-2",
+    id: "d1-3",
     name: "Rev. Dr. Yohanes Halim",
     jobTitle: "Senior Pastor Christ Chapel Karawaci",
     topic: "Interactive Biblical Exposition: What Does It Mean to Be Alive in Christ?",
@@ -33,7 +43,7 @@ export const day1Speakers: Speaker[] = [
     flipHorizontal: true,
   },
   {
-    id: "d1-3",
+    id: "d1-4",
     name: "Deny Kiswanto Sinaga",
     jobTitle: "Executive Director",
     topic: "Faithful Leadership for a Growing Mission: PHG & SDH: Where We Stand, Where We Are Going, What We Will and Will Not Pursue",
@@ -41,7 +51,7 @@ export const day1Speakers: Speaker[] = [
     imagePosition: "top", // diatur atas
   },
   {
-    id: "d1-4",
+    id: "d1-5",
     name: "Wilik Chen",
     jobTitle: "Vice Executive Director",
     topic: "Application Workshop: Where Does the Theme Live in Our Schools?",
@@ -50,7 +60,7 @@ export const day1Speakers: Speaker[] = [
     flipHorizontal: true,
   },
   {
-    id: "d1-5",
+    id: "d1-6",
     name: "Alvin Wijaya",
     jobTitle: "SDH School System Coordinator",
     topic: "Leadership Charge: We Do Not Teach This Theme. We Live It.",

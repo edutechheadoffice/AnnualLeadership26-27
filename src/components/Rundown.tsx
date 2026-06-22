@@ -26,9 +26,15 @@ const day1Sessions: Session[] = [
     icon: Users
   },
   {
-    time: "09:15 - 10:15",
+    time: "08:15 - 09:15",
     title: "Opening Worship: A Community of Servants Called to Lead (Mark 10:43-45)",
-    speaker: "-",
+    speaker: "Pdt. Deddy Simanjuntak",
+    icon: Church
+  },
+  {
+    time: "09:15 - 10:15",
+    title: "Faithful Leadership for a Growing Mission: PHG & SDH: Where We Stand, Where We Are Going, What We Will and Will Not Pursue",
+    speaker: "Dr. Stephanie Riady \n Deny Kiswanto Sinaga",
     icon: Church
   },
   {
@@ -209,6 +215,12 @@ const day3Sessions: Session[] = [
     time: "13:45 - 14:15",
     title: "Information & Updates: T&S Handbook, NTI/RTI, Lumina, and Operational Updates",
     speaker: "Alvin Wijaya",
+    icon: BookOpen
+  },
+  {
+    time: "14:15 - 15:00",
+    title: "Closing Worship: Soli Deo Gloria",
+    speaker: "Deny Kiswanto Sinaga",
     icon: BookOpen
   }
 ];
@@ -397,7 +409,7 @@ export default function Rundown() {
                                 })()
                               ) : (
                                 <div className="space-y-2.5">
-                                  <span className="text-[10px] font-bold uppercase tracking-wider text-brand-text-muted mb-1 block">Presenters</span>
+                                  <span className="text-[10px] font-bold uppercase tracking-wider text-brand-text-muted mb-1 block">Speakers</span>
                                   <div className="flex flex-wrap gap-2.5">
                                     {speakersList.map((speaker, idx) => {
                                       const speakerData = allSpeakers.find(s => s.name.trim().toLowerCase() === speaker.trim().toLowerCase() || speaker.includes(s.name) || s.name.includes(speaker));
