@@ -89,33 +89,7 @@ export const day2Speakers: Speaker[] = [
     topic: "KPI as Mission Narrative\n & KPI Exploration & School Action Planning — From Understanding to Ownership",
     imageUrl: "DSC09339.jpg",
     imagePosition: "top",
-  },
-  {
-    id: "d2-5",
-    name: "Fickle Firland",
-    jobTitle: "Head of Marketing Department",
-    topic: "KPI as Mission Narrative",
-    imageUrl: "DSC09759.jpg",
-    imagePosition: "top",
-  },
-  {
-    id: "d2-6",
-    name: "Tirza Widjonarko",
-    jobTitle: "Head of Academic Department",
-    topic: "KPI as Mission Narrative",
-    imageUrl: "20250916_001848506_iOS.jpg",
-    imagePosition: "center",
-    flipHorizontal: true,
-    imageScale: 1.2,
-  },
-  {
-    id: "d2-7",
-    name: "Geoffrey Gregorio",
-    jobTitle: "Head of FM Department",
-    topic: "KPI as Mission Narrative",
-    imageUrl: "DSC09781.jpg",
-    imagePosition: "top",
-  },
+  }
 ];
 
 export const day3Speakers: Speaker[] = [
