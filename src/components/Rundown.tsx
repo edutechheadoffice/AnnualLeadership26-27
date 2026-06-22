@@ -5,10 +5,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Clock, MapPin, Coffee, Users, Compass, BookOpen, Sun, Moon, Camera, Soup, Church, User } from "lucide-react";
 import { allSpeakers } from "./Speakers";
 
+
+
+
+interface Person {
+  name: string;
+  role: string;
+}
+
 interface Session {
   time: string;
   title: string;
-  speaker: string;
+  people?: Person[];
   icon: any;
 }
 
@@ -16,79 +24,120 @@ const day1Sessions: Session[] = [
   {
     time: "06:30 - 08:00",
     title: "Breakfast",
-    speaker: "",
     icon: Coffee
   },
   {
     time: "08:00 - 08:15",
     title: "Welcoming and Greetings",
-    speaker: "",
     icon: Users
   },
   {
     time: "08:15 - 09:15",
-    title: "Opening Worship: A Community of Servants Called to Lead (Mark 10:43-45)",
-    speaker: "Pdt. Deddy Simanjuntak",
+    title: "Opening Worship",
+    people: [
+      {
+        name: "Alexander Kevin",
+        role: "Liturgist"
+      },
+      {
+        name: "Pdt. Deddy Simanjuntak",
+        role: "Preacher"
+      }
+    ],
     icon: Church
   },
   {
     time: "09:15 - 10:15",
     title: "Faithful Leadership for a Growing Mission: PHG & SDH: Where We Stand, Where We Are Going, What We Will and Will Not Pursue",
-    speaker: "Dr. Stephanie Riady \n Deny Kiswanto Sinaga",
+    people: [
+      {
+        name: "Dr. Stephanie Riady",
+        role: "Speaker"
+      },
+      {
+        name: "Deny Kiswanto Sinaga",
+        role: "Speaker"
+      }
+    ],
     icon: Church
   },
   {
     time: "10:15 - 10:25",
     title: "Photo Session",
-    speaker: "-",
     icon: Camera
   },
   {
     time: "10:25 - 10:45",
     title: "Coffee Break",
-    speaker: "",
     icon: Coffee
   },
   {
     time: "10:45 - 12:00",
     title: "Table Talk: Guarding the Mission While Growing the Movement",
-    speaker: "",
+    people: [
+      {
+        name: "Head of Departments",
+        role: "Table of Facilitators"
+      },
+      {
+        name: "Wilik Chen",
+        role: "Facilitators"
+      },
+      {
+        name: "Alvin Wijaya",
+        role: "Facilitators"
+      }
+    ],
     icon: Users
   },
   {
     time: "12:00 - 13:00",
     title: "Lunch Break",
-    speaker: "",
     icon: Soup
   },
   {
     time: "13:00 - 14:30",
     title: "School Theme Exposition & Application — Alive in Christ Second Cycle: Faith in Christ | Colossians 2:13-14",
-    speaker: "Part 1:  Rev. Dr. Yohanes Halim \nPart 2: Wilik Chen \nPart 3: Alvin Wijaya",
+    people: [
+      {
+        name: "Part 1: Rev. Dr. Yohanes Halim",
+        role: "Speaker"
+      },
+      {
+        name: "Part 2: Wilik Chen",
+        role: "Speaker"
+      },
+      {
+        name: "Part 3: Alvin Wijaya",
+        role: "Speaker"
+      }
+    ],
     icon: Compass
   },
   {
     time: "14:30 - 15:00",
     title: "Reflective Prayer & Quite Time",
-    speaker: "Alexander Kevin",
+    people: [
+      {
+        name: "Alexander Kevin",
+        role: "Facilitator"
+      }
+    ],
     icon: Users
   },
   {
     time: "15:00 - 16:00",
     title: "Structured Rest — Personal time, optional peer walks, and quiet reflection",
-    speaker: "",
     icon: Users
   },
   {
     time: "16:00 - 17:00",
     title: "Transition",
-    speaker: "",
     icon: Users
   },
   {
     time: "17:00 - 19:00",
     title: "Dinner & Fellowship",
-    speaker: "",
     icon: Soup
   },
 ];
@@ -97,67 +146,94 @@ const day2Sessions: Session[] = [
   {
     time: "06:30 - 08:00",
     title: "Breakfast",
-    speaker: "",
     icon: Coffee
   },
   {
     time: "08:00 - 08:30",
     title: "Fragile, Fallen, and Held — The Leader Who Needs Grace (2 Corinthians 12:9-10)",
-    speaker: "Pdt. Ferry Pasang",
+    people: [
+      {
+        name: "Pdt. Ferry Pasang",
+        role: "Preacher"
+      }
+    ],
     icon: BookOpen
   },
   {
     time: "08:30 - 09:45",
     title: "Guarding the Leader: Fragility, Shadow Mission, and the Biblical Safeguards",
-    speaker: "Alfa Sritosa Citra",
+    people: [
+      {
+        name: "Alfa Sritosa Citra",
+        role: "Speaker"
+      }
+    ],
     icon: Users
   },
   {
     time: "09:45 - 10:05",
     title: "Coffee Break",
-    speaker: "",
     icon: Coffee
   },
   {
     time: "10:05 - 10:45",
     title: "SDH Growth Map — 3-Year Growth Trajectory",
-    speaker: "Deny Kiswanto Sinaga",
+    people: [
+      {
+        name: "Deny Kiswanto Sinaga",
+        role: "Speaker"
+      }
+    ],
     icon: Users
   },
   {
     time: "10:45 - 12:00",
     title: "KPI as Mission Narrative (5 Chapters)",
-    speaker: "Alvin Wijaya \nHead of Departments",
+    people: [
+      {
+        name: "Alvin Wijaya",
+        role: "Speaker"
+      },
+      {
+        name: "Head of Departments",
+        role: "Facilitators"
+      }
+    ],
     icon: Users
   },
   {
     time: "12:00 - 13:00",
     title: "Lunch",
-    speaker: "",
     icon: Soup
   },
   {
     time: "13:00 - 14:30",
     title: "KPI Exploration & School Action Planning — From Understanding to Ownership",
-    speaker: "Wilik Chen \n Alvin Wijaya ",
+    people: [
+      {
+        name: "Wilik Chen",
+        role: "Facilitators"
+      },
+      {
+        name: "Alvin Wijaya",
+        role: "Facilitators"
+      }
+    ],
     icon: Users
   },
   {
     time: "14:30 - 14:50",
     title: "Coffee Break",
-    speaker: "",
     icon: Coffee
   },
   {
     time: "14:50 - 16:50",
     title: "School Action Planning (Continued)",
-    speaker: "",
     icon: Users
   },
   {
     time: "16:00 - 17:00",
     title: "Dismissal",
-    speaker: "",
     icon: Users
   }
 ];
@@ -166,61 +242,99 @@ const day3Sessions: Session[] = [
   {
     time: "06:30 - 08:00",
     title: "Breakfast",
-    speaker: "",
     icon: Coffee
   },
   {
     time: "08:00 - 08:30",
     title: "We Are Unworthy Servants — Soli Deo Gloria (Luke 17:10)",
-    speaker: "Pdt. Williem Ferdinandus",
+    people: [
+      {
+        name: "Pdt. Williem Ferdinandus",
+        role: "Preacher"
+      }
+    ],
     icon: BookOpen
   },
   {
     time: "08:30 - 09:30",
     title: "Learning from Each Other— School Stories That Inspire",
-    speaker: "Aditya \n Nathanael \n Rifena",
+    people: [
+      {
+        name: "Aditya Wiranata Sapang",
+        role: "Speaker"
+      },
+      {
+        name: "Nathanael Febrian",
+        role: "Speaker"
+      },
+      {
+        name: "Rifena Kurniawan",
+        role: "Speaker"
+      }
+    ],
     icon: BookOpen
   },
   {
     time: "09:30 - 09:45",
     title: "Coffee Break",
-    speaker: "",
     icon: Coffee
   },
   {
     time: "09:45 - 10:45",
     title: "School Action Plan Workshop — Finalize, Sharpen, Commit",
-    speaker: "",
+    people: [
+      {
+        name: "Wilik Chen",
+        role: "Facilitators"
+      },
+      {
+        name: "Alvin Wijaya",
+        role: "Facilitators"
+      }
+    ],
     icon: BookOpen
   },
   {
     time: "10:45 - 11:45",
     title: "Professional Presence & School Community Standards",
-    speaker: "",
     icon: BookOpen
   },
   {
     time: "11:45 - 12:45",
     title: "Lunch Break",
-    speaker: "",
     icon: Soup
   },
   {
     time: "12:45 - 13:45",
     title: "Info Session: Universitas Pelita Harapan",
-    speaker: "UPH - Marketing",
+    people: [
+      {
+        name: "UPH - Marketing",
+        role: "Facilitator"
+      }
+    ],
     icon: BookOpen
   },
   {
     time: "13:45 - 14:15",
     title: "Information & Updates: T&S Handbook, NTI/RTI, Lumina, and Operational Updates",
-    speaker: "Alvin Wijaya",
+    people: [
+      {
+        name: "Alvin Wijaya",
+        role: "Speaker"
+      }
+    ],
     icon: BookOpen
   },
   {
     time: "14:15 - 15:00",
     title: "Closing Worship: Soli Deo Gloria",
-    speaker: "Deny Kiswanto Sinaga",
+    people: [
+      {
+        name: "Deny Kiswanto Sinaga",
+        role: "Speaker"
+      }
+    ],
     icon: BookOpen
   }
 ];
@@ -309,8 +423,7 @@ export default function Rundown() {
                 const isEven = index % 2 === 0;
 
                 // Process speaker formatting
-                const hasSpeaker = session.speaker && session.speaker.trim() !== "" && session.speaker !== "-";
-                const speakersList = hasSpeaker ? session.speaker.split('\n').filter(s => s.trim() !== "") : [];
+                const people = session.people || [];
 
                 return (
                   <motion.div
@@ -375,73 +488,57 @@ export default function Rundown() {
                             {session.title}
                           </h4>
 
-                          {/* Dynamic Speakers Display */}
-                          {speakersList.length > 0 && (
+                          {/* Dynamic People Display */}
+                          {people.length > 0 && (
                             <div className="mb-2 bg-brand-cream/50 rounded-xl p-3 border border-brand-blue-light/5">
-                              {speakersList.length === 1 ? (
-                                (() => {
-                                  const speakerData = allSpeakers.find(s => s.name.trim().toLowerCase() === speakersList[0].trim().toLowerCase() || speakersList[0].includes(s.name) || s.name.includes(speakersList[0]));
+                              <div className="space-y-2">
+                                {people.map((person, idx) => {
+                                  const speakerData = allSpeakers.find(
+                                    s =>
+                                      s.name.trim().toLowerCase() === person.name.trim().toLowerCase() ||
+                                      person.name.includes(s.name) ||
+                                      s.name.includes(person.name)
+                                  );
+
                                   return (
-                                    <div className="flex items-center gap-3">
+                                    <div
+                                      key={idx}
+                                      className="flex items-center gap-3 bg-brand-white rounded-xl px-3 py-2 border border-brand-blue-light/10"
+                                    >
                                       {speakerData?.imageUrl ? (
-                                        <div className="w-8 h-8 rounded-full overflow-hidden shrink-0 border border-brand-orange/20 shadow-sm relative bg-brand-white">
+                                        <div className="w-8 h-8 rounded-full overflow-hidden border border-brand-orange/20">
                                           <img
                                             src={speakerData.imageUrl}
                                             alt={speakerData.name}
                                             className="w-full h-full object-cover"
                                             style={{
                                               objectPosition: speakerData.imagePosition || "center",
-                                              transform: speakerData.flipHorizontal ? "scaleX(-1)" : undefined,
+                                              transform: speakerData.flipHorizontal
+                                                ? "scaleX(-1)"
+                                                : undefined,
                                               scale: speakerData.imageScale || 1,
                                             }}
                                           />
                                         </div>
                                       ) : (
-                                        <div className="w-8 h-8 rounded-full bg-brand-orange/10 flex items-center justify-center shrink-0">
+                                        <div className="w-8 h-8 rounded-full bg-brand-orange/10 flex items-center justify-center">
                                           <User className="w-4 h-4 text-brand-orange" />
                                         </div>
                                       )}
-                                      <span className="text-sm font-semibold text-brand-text-dark">
-                                        {speakersList[0]}
-                                      </span>
+
+                                      <div className="flex flex-col">
+                                        <span className="text-sm font-semibold text-brand-text-dark">
+                                          {person.name}
+                                        </span>
+
+                                        <span className="text-xs uppercase tracking-wider text-brand-text-muted">
+                                          {person.role}
+                                        </span>
+                                      </div>
                                     </div>
                                   );
-                                })()
-                              ) : (
-                                <div className="space-y-2.5">
-                                  <span className="text-[10px] font-bold uppercase tracking-wider text-brand-text-muted mb-1 block">Speakers</span>
-                                  <div className="flex flex-wrap gap-2.5">
-                                    {speakersList.map((speaker, idx) => {
-                                      const speakerData = allSpeakers.find(s => s.name.trim().toLowerCase() === speaker.trim().toLowerCase() || speaker.includes(s.name) || s.name.includes(speaker));
-                                      return (
-                                        <div key={idx} className="flex items-center gap-2 bg-brand-white pr-3 pl-1.5 py-1.5 rounded-full border border-brand-blue-light/10 shadow-sm">
-                                          {speakerData?.imageUrl ? (
-                                            <div className="w-6 h-6 rounded-full overflow-hidden shrink-0 border border-brand-orange/20 relative bg-brand-cream">
-                                              <img
-                                                src={speakerData.imageUrl}
-                                                alt={speakerData.name}
-                                                className="w-full h-full object-cover"
-                                                style={{
-                                                  objectPosition: speakerData.imagePosition || "center",
-                                                  transform: speakerData.flipHorizontal ? "scaleX(-1)" : undefined,
-                                                  scale: speakerData.imageScale || 1,
-                                                }}
-                                              />
-                                            </div>
-                                          ) : (
-                                            <div className="w-6 h-6 rounded-full bg-brand-orange/10 flex items-center justify-center shrink-0">
-                                              <User className="w-3 h-3 text-brand-orange" />
-                                            </div>
-                                          )}
-                                          <span className="text-sm font-medium text-brand-text-dark whitespace-nowrap">
-                                            {speaker.trim()}
-                                          </span>
-                                        </div>
-                                      );
-                                    })}
-                                  </div>
-                                </div>
-                              )}
+                                })}
+                              </div>
                             </div>
                           )}
                         </div>

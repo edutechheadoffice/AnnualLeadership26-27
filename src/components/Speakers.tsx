@@ -9,6 +9,7 @@ export interface Speaker {
   name: string;
   jobTitle: string;
   topic: string;
+  role?: string;
   label?: string;
   imageUrl?: string;
   imagePosition?: string; // misalnya: "top", "bottom", "center", atau "0% 20%"
@@ -22,6 +23,7 @@ export const day1Speakers: Speaker[] = [
     name: "Pdt. Deddy Simanjuntak",
     jobTitle: "Pastor Christ Chapel Sentani",
     topic: "A Community of Servants Called to Lead (Mark 10:43-35)",
+    role: "Preacher",
     imageUrl: "https://christchapelkarawaci.org/wp-content/uploads/2025/02/DS2-scaled.jpg",
     imagePosition: "top",
     flipHorizontal: true,
@@ -32,6 +34,7 @@ export const day1Speakers: Speaker[] = [
     name: "dr. Stephanie Riady",
     jobTitle: "Executive Director",
     topic: "Faithful Leadership for a Growing Mission: PHG & SDH: Where We Stand, Where We Are Going, What We Will and Will Not Pursue",
+    role: "Speaker",
     imageUrl: "1712070861955.jpeg",
   },
   {
@@ -39,6 +42,7 @@ export const day1Speakers: Speaker[] = [
     name: "Rev. Dr. Yohanes Halim",
     jobTitle: "Senior Pastor Christ Chapel Karawaci",
     topic: "Interactive Biblical Exposition: What Does It Mean to Be Alive in Christ?",
+    role: "Speaker",
     imageUrl: "YH2-scaled.jpg",
     flipHorizontal: true,
   },
@@ -47,6 +51,7 @@ export const day1Speakers: Speaker[] = [
     name: "Deny Kiswanto Sinaga",
     jobTitle: "Executive Director",
     topic: "Faithful Leadership for a Growing Mission: PHG & SDH: Where We Stand, Where We Are Going, What We Will and Will Not Pursue",
+    role: "Speaker",
     imageUrl: "DSC09905-HD.jpg",
     imagePosition: "top", // diatur atas
   },
@@ -55,6 +60,7 @@ export const day1Speakers: Speaker[] = [
     name: "Wilik Chen",
     jobTitle: "Vice Executive Director",
     topic: "Application Workshop: Where Does the Theme Live in Our Schools?",
+    role: "Speaker",
     imageUrl: "HoS DM Wilik_edited_edited.avif",
     imagePosition: "top",
     flipHorizontal: true,
@@ -64,6 +70,7 @@ export const day1Speakers: Speaker[] = [
     name: "Alvin Wijaya",
     jobTitle: "SDH School System Coordinator",
     topic: "Leadership Charge: We Do Not Teach This Theme. We Live It.",
+    role: "Speaker",
     imageUrl: "DSC09339.jpg",
     imagePosition: "top",
   },
@@ -76,6 +83,7 @@ export const day2Speakers: Speaker[] = [
     jobTitle: "Senior Pastor Christ Chapel Kupang",
     label: "Devotion",
     topic: "Fragile, Fallen, and Held — The Leader Who Needs Grace (2 Corinthians 12:9-10)",
+    role: "Preacher",
     imageUrl: "https://www.gprii.org/wp-content/uploads/2025/01/3.jpg"
   },
   {
@@ -83,6 +91,7 @@ export const day2Speakers: Speaker[] = [
     name: "Alfa Sritosa Citra",
     jobTitle: "Elder Christ Chapel Karawaci",
     topic: "Guarding the Leader: Fragility, Shadow Mission, and the Biblical Safeguards",
+    role: "Speaker",
     imageUrl: "ACS-scaled.jpg",
     flipHorizontal: true,
   },
@@ -91,6 +100,7 @@ export const day2Speakers: Speaker[] = [
     name: "Deny Kiswanto Sinaga",
     jobTitle: "Executive Director",
     topic: "SDH Growth Map  — 3-Year Growth Trajectory",
+    role: "Speaker",
     imageUrl: "DSC09905-HD.jpg",
     imagePosition: "top",
   },
@@ -99,6 +109,7 @@ export const day2Speakers: Speaker[] = [
     name: "Alvin Wijaya",
     jobTitle: "SDH School System Coordinator",
     topic: "KPI as Mission Narrative\n & KPI Exploration & School Action Planning — From Understanding to Ownership",
+    role: "Speaker",
     imageUrl: "DSC09339.jpg",
     imagePosition: "top",
   }
@@ -111,6 +122,7 @@ export const day3Speakers: Speaker[] = [
     jobTitle: "Senior Pastor of Christ Chapel Manado",
     label: "Devotion",
     topic: "We Are Unworthy Servants — Soli Deo Gloria (Luke 17:10)",
+    role: "Preacher",
     imageUrl: "Ps.-Williem-Ferdinandus-2048x2048.webp",
   },
   {
@@ -118,6 +130,7 @@ export const day3Speakers: Speaker[] = [
     name: "Rifena Kurniawan",
     jobTitle: "Acting Head of School SDH Lippo Village",
     topic: "Learning from Each Other — School Stories That Inspire",
+    role: "Speaker",
     imageUrl: "https://media.licdn.com/dms/image/v2/D5603AQEUW78Itz8WqQ/profile-displayphoto-crop_800_800/B56ZgjHE3dH0AM-/0/1752935715514?e=1783555200&v=beta&t=9675OBu8nQWyFiG7_2CWkf9wSbDBl_Kzd41QBaR71bQ",
     flipHorizontal: true,
   },
@@ -126,6 +139,7 @@ export const day3Speakers: Speaker[] = [
     name: "Aditya Wiranata Sapang",
     jobTitle: "Principal Coordinator SDH Sentul",
     topic: "Learning from Each Other — School Stories That Inspire",
+    role: "Speaker",
     imageUrl: "https://media.licdn.com/dms/image/v2/C5603AQGpiedsd4e3AA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1615163342710?e=1783555200&v=beta&t=mTuZc0YjNWIUhvk0_U4snasRrJSt7SftXi7EIVZCbTg",
     flipHorizontal: true,
   },
@@ -134,6 +148,7 @@ export const day3Speakers: Speaker[] = [
     name: "Nathanael Febrian",
     jobTitle: "Head of School SDH Cikarang",
     topic: "Learning from Each Other — School Stories That Inspire",
+    role: "Speaker",
     imageUrl: "",
     flipHorizontal: true,
   },
@@ -143,6 +158,7 @@ export const day3Speakers: Speaker[] = [
     jobTitle: "School System Coordinator of SDH",
     label: "Info & Updates",
     topic: "Information & Updates: T&S Handbook, NTI/RTI, Lumina, and Operational Updates",
+    role: "Speaker",
     imageUrl: "DSC09339.jpg",
     imagePosition: "top",
   }
@@ -183,7 +199,7 @@ export default function Speakers() {
             transition={{ delay: 0.1 }}
             className="text-3xl sm:text-5xl font-bebas text-brand-blue-dark tracking-wide uppercase mt-2 text-shadow-soft"
           >
-            Meet The Speakers
+            Meet The Preachers & Speakers
           </motion.h3>
           <div className="w-12 h-1 bg-brand-blue-light mt-4 rounded-full" />
         </div>
@@ -254,7 +270,7 @@ export default function Speakers() {
                     {/* A subtle overlay to make it look like a premium placeholder */}
                     <div className="absolute inset-0 bg-brand-blue-dark/10 mix-blend-multiply opacity-50 transition-opacity duration-300 group-hover:opacity-0" />
                     <div className="absolute bottom-2 right-2 bg-brand-white/90 backdrop-blur-sm px-3 py-1 rounded-md text-[10px] font-bold text-brand-blue-dark uppercase tracking-wider shadow-sm">
-                      Speaker
+                      {speaker.role || "Speaker"}
                     </div>
                   </div>
 
