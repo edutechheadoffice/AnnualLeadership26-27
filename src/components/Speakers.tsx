@@ -90,7 +90,7 @@ export const day2Speakers: Speaker[] = [
   {
     id: "d2-1",
     name: "Alfa Sritosa Citra",
-    jobTitle: "Pastor of Christ Chapel Karawaci",
+    jobTitle: "Ruling Elder of Christ Chapel Karawaci",
     topic: "Guarding the Leader: Fragility, Shadow Mission, and the Biblical Safeguards",
     role: "Speaker",
     imageUrl: "ACS-scaled.jpg",
