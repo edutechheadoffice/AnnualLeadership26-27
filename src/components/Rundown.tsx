@@ -76,16 +76,12 @@ const day1Sessions: Session[] = [
     title: "Table Talk: Guarding the Mission While Growing the Movement",
     people: [
       {
-        name: "Head of Departments",
-        role: "Table of Facilitators"
-      },
-      {
         name: "Wilik Chen",
-        role: "Facilitators"
+        role: "Facilitator"
       },
       {
         name: "Alvin Wijaya",
-        role: "Facilitators"
+        role: "Facilitator"
       }
     ],
     icon: Users
