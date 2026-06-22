@@ -26,7 +26,12 @@ interface PreloaderProps {
 const PRELOADER_IMAGES = [
   "/hero-left.jpg",
   "/hero-right.jpg",
-  "/DSC06417.JPG"
+  "/DSC06417.JPG",
+  "/IMG_4399.JPG",
+  "/IMG_4530.JPG",
+  "/IMG_4996.JPG",
+  "/DSC00192.jpg"
+
 ];
 
 const CAPTIONS = [
@@ -234,7 +239,7 @@ function RoundedProgressBar({ progress }: { progress: number }) {
       {/* Percentage */}
       <span
         className="font-bebas text-2xl text-white tabular-nums leading-none tracking-wider"
-        style={{ textShadow: "0 0 12px rgba(243,213,78,0.7)" }}
+        style={{ textShadow: "0 0 8px rgba(255,255,255,.2)" }}
       >
         {progress}%
       </span>
@@ -249,8 +254,8 @@ function RoundedProgressBar({ progress }: { progress: number }) {
           className="h-full rounded-full"
           style={{
             width: `${progress}%`,
-            background: `linear-gradient(90deg, ${BRAND.blueLight}, ${BRAND.yellow})`,
-            boxShadow: `0 0 10px rgba(243,213,78,0.5)`,
+            background: "#FFFFFF",
+            boxShadow: "0 0 10px rgba(255,255,255,.25)",
             transition: "width 0.1s linear"
           }}
         />
@@ -344,8 +349,8 @@ export default function Preloader({ onComplete }: PreloaderProps) {
           className="h-full"
           style={{
             width: `${progress}%`,
-            background: `linear-gradient(90deg, ${BRAND.blueLight}, ${BRAND.yellow})`,
-            boxShadow: `0 0 10px rgba(243,213,78,0.55)`,
+            background: "#FFFFFF",
+            boxShadow: "0 0 10px rgba(255,255,255,.4)",
             transition: "width 0.1s linear",
           }}
         />
@@ -448,7 +453,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1.1 }}
-          className="mt-8 flex flex-col items-center gap-4"
+          className="mt-32 flex flex-col items-center gap-4"
         >
           <AnimatePresence mode="wait">
             {!showButton ? (
@@ -472,7 +477,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
                 <button
                   id="preloader-enter-btn"
                   onClick={handleEnter}
-                  className="relative group px-10 py-3.5 font-sans text-xs uppercase tracking-[0.3em] font-semibold text-white transition-all duration-300 rounded-full translate-y-11"
+                  className="relative group px-10 py-3.5 font-sans text-xs uppercase tracking-[0.3em] font-semibold text-white transition-all duration-300 rounded-full"
                   style={{
                     border: `1px solid rgba(243,213,78,0.45)`,
                     background: `transparent`,

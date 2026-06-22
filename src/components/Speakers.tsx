@@ -9,6 +9,7 @@ export interface Speaker {
   name: string;
   jobTitle: string;
   topic: string;
+  label?: string;
   imageUrl?: string;
   imagePosition?: string; // misalnya: "top", "bottom", "center", atau "0% 20%"
   flipHorizontal?: boolean;
@@ -26,7 +27,7 @@ export const day1Speakers: Speaker[] = [
   {
     id: "d1-2",
     name: "Rev. Dr. Yohanes Halim",
-    jobTitle: "Senior Pastor of Christ Chapel Karawaci",
+    jobTitle: "Senior Pastor Christ Chapel Karawaci",
     topic: "Interactive Biblical Exposition: What Does It Mean to Be Alive in Christ?",
     imageUrl: "YH2-scaled.jpg",
     flipHorizontal: true,
@@ -51,7 +52,7 @@ export const day1Speakers: Speaker[] = [
   {
     id: "d1-5",
     name: "Alvin Wijaya",
-    jobTitle: "School System Coordinator of SDH",
+    jobTitle: "SDH School System Coordinator",
     topic: "Leadership Charge: We Do Not Teach This Theme. We Live It.",
     imageUrl: "DSC09339.jpg",
     imagePosition: "top",
@@ -63,13 +64,14 @@ export const day2Speakers: Speaker[] = [
     id: "d2-2",
     name: "Pdt. Ferry Pasang",
     jobTitle: "Senior Pastor Christ Chapel Kupang",
+    label: "Devotion",
     topic: "Fragile, Fallen, and Held — The Leader Who Needs Grace (2 Corinthians 12:9-10)",
     imageUrl: "https://www.gprii.org/wp-content/uploads/2025/01/3.jpg"
   },
   {
     id: "d2-1",
     name: "Alfa Sritosa Citra",
-    jobTitle: "Elders at Christ Chapel Karawaci",
+    jobTitle: "Elder Christ Chapel Karawaci",
     topic: "Guarding the Leader: Fragility, Shadow Mission, and the Biblical Safeguards",
     imageUrl: "ACS-scaled.jpg",
     flipHorizontal: true,
@@ -85,7 +87,7 @@ export const day2Speakers: Speaker[] = [
   {
     id: "d2-4",
     name: "Alvin Wijaya",
-    jobTitle: "School System Coordinator of SDH",
+    jobTitle: "SDH School System Coordinator",
     topic: "KPI as Mission Narrative\n & KPI Exploration & School Action Planning — From Understanding to Ownership",
     imageUrl: "DSC09339.jpg",
     imagePosition: "top",
@@ -97,6 +99,7 @@ export const day3Speakers: Speaker[] = [
     id: "d3-1",
     name: "Pdt. Williem Ferdinandus",
     jobTitle: "Senior Pastor of Christ Chapel Manado",
+    label: "Devotion",
     topic: "We Are Unworthy Servants — Soli Deo Gloria (Luke 17:10)",
     imageUrl: "Ps.-Williem-Ferdinandus-2048x2048.webp",
   },
@@ -111,7 +114,7 @@ export const day3Speakers: Speaker[] = [
   {
     id: "d3-3",
     name: "Aditya Wiranata Sapang",
-    jobTitle: "Principal Coordinator of SDH Sentul",
+    jobTitle: "Principal Coordinator SDH Sentul",
     topic: "Learning from Each Other — School Stories That Inspire",
     imageUrl: "https://media.licdn.com/dms/image/v2/C5603AQGpiedsd4e3AA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1615163342710?e=1783555200&v=beta&t=mTuZc0YjNWIUhvk0_U4snasRrJSt7SftXi7EIVZCbTg",
     flipHorizontal: true,
@@ -128,6 +131,7 @@ export const day3Speakers: Speaker[] = [
     id: "d3-5",
     name: "Alvin Wijaya",
     jobTitle: "School System Coordinator of SDH",
+    label: "Info & Updates",
     topic: "Information & Updates: T&S Handbook, NTI/RTI, Lumina, and Operational Updates",
     imageUrl: "DSC09339.jpg",
     imagePosition: "top",
@@ -261,7 +265,7 @@ export default function Speakers() {
                         <BookOpen className="w-4 h-4 text-brand-blue-light shrink-0 mt-0.5" />
                         <div>
                           <span className="block text-[10px] font-semibold text-brand-text-muted uppercase tracking-wider mb-1">
-                            Topic:
+                            {speaker.label || "Topic"}:
                           </span>
                           <span className="text-sm font-medium text-brand-blue-dark leading-snug">
                             {speaker.topic}
