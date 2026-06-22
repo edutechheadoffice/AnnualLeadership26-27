@@ -55,86 +55,6 @@ const PARTICLE_COLORS = [
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
 
-function FloatingParticles() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const particlesRef = useRef<Particle[]>([]);
-  const animFrameRef = useRef<number>(0);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-
-    const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-    resize();
-    window.addEventListener("resize", resize);
-
-    // Init particles
-    particlesRef.current = Array.from({ length: 80 }, (_, i) => ({
-      id: i,
-      x: Math.random() * window.innerWidth,
-      y: Math.random() * window.innerHeight,
-      size: Math.random() * 2.5 + 0.5,
-      opacity: Math.random() * 0.6 + 0.1,
-      speedX: (Math.random() - 0.5) * 0.4,
-      speedY: (Math.random() - 0.5) * 0.4,
-      color: PARTICLE_COLORS[Math.floor(Math.random() * PARTICLE_COLORS.length)],
-    }));
-
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      particlesRef.current.forEach((p) => {
-        // Draw particle
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = p.color.replace(/[\d.]+\)$/, `${p.opacity})`);
-        ctx.fill();
-
-        // Draw glow
-        const grd = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size * 4);
-        grd.addColorStop(0, p.color.replace(/[\d.]+\)$/, "0.15)"));
-        grd.addColorStop(1, "transparent");
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size * 4, 0, Math.PI * 2);
-        ctx.fillStyle = grd;
-        ctx.fill();
-
-        // Move
-        p.x += p.speedX;
-        p.y += p.speedY;
-
-        // Wrap around
-        if (p.x < -10) p.x = canvas.width + 10;
-        if (p.x > canvas.width + 10) p.x = -10;
-        if (p.y < -10) p.y = canvas.height + 10;
-        if (p.y > canvas.height + 10) p.y = -10;
-      });
-
-      animFrameRef.current = requestAnimationFrame(animate);
-    };
-
-    animate();
-
-    return () => {
-      cancelAnimationFrame(animFrameRef.current);
-      window.removeEventListener("resize", resize);
-    };
-  }, []);
-
-  return (
-    <canvas
-      ref={canvasRef}
-      className="absolute inset-0 pointer-events-none z-10"
-      aria-hidden="true"
-    />
-  );
-}
-
 function LightStreaks() {
   return (
     <div className="absolute inset-0 pointer-events-none z-10 overflow-hidden" aria-hidden="true">
@@ -201,7 +121,7 @@ function CaptionSequence() {
             <span
               className="font-bebas tracking-[0.3em] uppercase text-white"
               style={{
-                fontSize: "clamp(1.4rem, 3vw, 2.2rem)",
+                fontSize: "clamp(0.9rem, 1.9vw, 1.7rem)",
                 textShadow: "0 0 24px rgba(243,213,78,0.6), 0 0 48px rgba(243,213,78,0.2)",
                 letterSpacing: captionIndex === 2 ? "0.4em" : "0.3em",
               }}
@@ -308,55 +228,32 @@ function ImageCarousel() {
   );
 }
 
-function CircularProgress({ progress }: { progress: number }) {
-  const radius = 36;
-  const circumference = 2 * Math.PI * radius;
-  const strokeDashoffset = circumference - (progress / 100) * circumference;
-
+function RoundedProgressBar({ progress }: { progress: number }) {
   return (
-    <div className="relative flex items-center justify-center w-24 h-24">
-      {/* Outer glow — brand blue + yellow */}
+    <div className="flex flex-col items-center gap-3 w-64 sm:w-80">
+      {/* Percentage */}
+      <span
+        className="font-bebas text-2xl text-white tabular-nums leading-none tracking-wider"
+        style={{ textShadow: "0 0 12px rgba(243,213,78,0.7)" }}
+      >
+        {progress}%
+      </span>
+
+      {/* Rounded Bar Container */}
       <div
-        className="absolute inset-0 rounded-full"
-        style={{ boxShadow: `0 0 22px 4px rgba(47,120,216,0.25), 0 0 44px 8px rgba(243,213,78,0.12)` }}
-      />
-
-      <svg className="w-24 h-24 -rotate-90" viewBox="0 0 100 100">
-        {/* Track */}
-        <circle
-          cx="50" cy="50" r={radius}
-          fill="none"
-          stroke="rgba(255,255,255,0.10)"
-          strokeWidth="2.5"
+        className="w-full h-2.5 rounded-full overflow-hidden bg-white/10"
+        style={{ boxShadow: "inset 0 1px 3px rgba(0,0,0,0.3)" }}
+      >
+        {/* Fill */}
+        <motion.div
+          className="h-full rounded-full"
+          style={{
+            width: `${progress}%`,
+            background: `linear-gradient(90deg, ${BRAND.blueLight}, ${BRAND.yellow})`,
+            boxShadow: `0 0 10px rgba(243,213,78,0.5)`,
+            transition: "width 0.1s linear"
+          }}
         />
-        {/* Progress arc — brand blue-light → brand yellow */}
-        <motion.circle
-          cx="50" cy="50" r={radius}
-          fill="none"
-          stroke="url(#progressGradBrand)"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeDasharray={circumference}
-          strokeDashoffset={strokeDashoffset}
-          style={{ transition: "stroke-dashoffset 0.1s linear" }}
-        />
-        <defs>
-          <linearGradient id="progressGradBrand" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#2F78D8" />
-            <stop offset="100%" stopColor="#F3D54E" />
-          </linearGradient>
-        </defs>
-      </svg>
-
-      {/* Center — Bebas Neue for number, Inter for label */}
-      <div className="absolute flex flex-col items-center">
-        <span
-          className="font-bebas text-2xl text-white tabular-nums leading-none"
-          style={{ textShadow: "0 0 12px rgba(243,213,78,0.7)" }}
-        >
-          {progress}
-        </span>
-        <span className="text-[8px] uppercase tracking-[0.2em] font-sans" style={{ color: "#7fa8d4" }}>%</span>
       </div>
     </div>
   );
@@ -434,9 +331,6 @@ export default function Preloader({ onComplete }: PreloaderProps) {
     >
       {/* ── Background: scrolling image carousel ── */}
       <ImageCarousel />
-
-      {/* ── Canvas particles ── */}
-      <FloatingParticles />
 
       {/* ── Light streaks ── */}
       <LightStreaks />
@@ -565,7 +459,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.4 }}
               >
-                <CircularProgress progress={progress} />
+                <RoundedProgressBar progress={progress} />
               </motion.div>
             ) : (
               <motion.div
@@ -578,12 +472,13 @@ export default function Preloader({ onComplete }: PreloaderProps) {
                 <button
                   id="preloader-enter-btn"
                   onClick={handleEnter}
-                  className="relative group px-10 py-3.5 font-sans text-xs uppercase tracking-[0.3em] font-semibold text-white transition-all duration-300"
+                  className="relative group px-10 py-3.5 font-sans text-xs uppercase tracking-[0.3em] font-semibold text-white transition-all duration-300 rounded-full translate-y-11"
                   style={{
                     border: `1px solid rgba(243,213,78,0.45)`,
-                    background: `rgba(243,213,78,0.07)`,
+                    background: `transparent`,
                     backdropFilter: "blur(10px)",
-                    WebkitBackdropFilter: "blur(10px)",
+                    WebkitBackdropFilter: "blur(10px)"
+
                   }}
                   onMouseEnter={(e) => {
                     (e.currentTarget as HTMLButtonElement).style.background = `rgba(243,213,78,0.16)`;
@@ -596,12 +491,6 @@ export default function Preloader({ onComplete }: PreloaderProps) {
                     (e.currentTarget as HTMLButtonElement).style.boxShadow = "none";
                   }}
                 >
-                  {/* Corner accents — brand yellow */}
-                  <span className="absolute top-0 left-0 w-2 h-2 border-t border-l" style={{ borderColor: BRAND.yellow }} />
-                  <span className="absolute top-0 right-0 w-2 h-2 border-t border-r" style={{ borderColor: BRAND.yellow }} />
-                  <span className="absolute bottom-0 left-0 w-2 h-2 border-b border-l" style={{ borderColor: BRAND.yellow }} />
-                  <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r" style={{ borderColor: BRAND.yellow }} />
-
                   <span style={{ textShadow: `0 0 14px rgba(243,213,78,0.7)` }}>
                     GO TO WEBSITE
                   </span>
