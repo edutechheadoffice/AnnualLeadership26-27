@@ -24,6 +24,7 @@ export const day1Speakers: Speaker[] = [
     jobTitle: "Pastor Christ Chapel Sentani",
     topic: "A Community of Servants Called to Lead (Mark 10:43-35)",
     role: "Preacher",
+    label: "Opening Service",
     imageUrl: "https://christchapelkarawaci.org/wp-content/uploads/2025/02/DS2-scaled.jpg",
     imagePosition: "top",
     flipHorizontal: true,
