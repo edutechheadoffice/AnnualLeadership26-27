@@ -111,7 +111,7 @@ function CaptionSequence() {
   const current = CAPTIONS[captionIndex];
 
   return (
-    <div className="absolute bottom-[27%] left-1/2 -translate-x-1/2 w-full flex flex-col items-center z-40 px-6">
+    <div className="absolute bottom-[20%] left-1/2 -translate-x-1/2 w-full flex flex-col items-center z-40 px-6">
       <AnimatePresence mode="wait">
         {visible && (
           <motion.div
