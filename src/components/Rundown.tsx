@@ -343,7 +343,22 @@ const days = [
 
 export default function Rundown() {
   const [activeDay, setActiveDay] = useState("day1");
+  const [selectedTime, setSelectedTime] = useState("All");
+
   const activeSessions = days.find((d) => d.id === activeDay)?.sessions || [];
+
+  // Extract unique times for the currently selected day
+  const uniqueTimes = Array.from(new Set(activeSessions.map(s => s.time)));
+
+  // Filter sessions based on selected time
+  const filteredSessions = selectedTime === "All"
+    ? activeSessions
+    : activeSessions.filter(s => s.time === selectedTime);
+
+  const handleDayChange = (dayId: string) => {
+    setActiveDay(dayId);
+    setSelectedTime("All"); // Reset time filter when day changes
+  };
 
   return (
     <section id="rundown" className="py-24 px-6 bg-brand-cream relative overflow-hidden">
@@ -377,33 +392,51 @@ export default function Rundown() {
           <div className="w-12 h-1 bg-brand-orange mt-4 rounded-full" />
         </div>
 
-        {/* Day Selector Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-16">
-          {days.map((day) => {
-            const isActive = activeDay === day.id;
-            return (
-              <button
-                key={day.id}
-                onClick={() => setActiveDay(day.id)}
-                className={`px-6 py-3 sm:py-4 rounded-2xl text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-300 relative shadow-sm flex flex-col items-center gap-1 ${isActive
-                  ? "text-brand-white bg-brand-blue-dark scale-105"
-                  : "text-brand-text-dark bg-brand-white hover:bg-brand-blue-light/5 border border-brand-blue-light/10 hover:scale-105 hover:shadow-md"
-                  }`}
-              >
-                <span className="relative z-10">{day.label}</span>
-                <span className="block text-[10px] sm:text-xs opacity-70 relative z-10 font-medium normal-case">
-                  {day.date}
-                </span>
-                {isActive && (
-                  <motion.div
-                    layoutId="activeDayBg"
-                    className="absolute inset-0 bg-brand-blue-dark rounded-2xl -z-0 shadow-lg shadow-brand-blue-dark/20"
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                  />
-                )}
-              </button>
-            );
-          })}
+        {/* Day Selector Tabs & Time Filter */}
+        <div className="flex flex-col items-center gap-6 mb-16">
+          {/* Day Tabs */}
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+            {days.map((day) => {
+              const isActive = activeDay === day.id;
+              return (
+                <button
+                  key={day.id}
+                  onClick={() => handleDayChange(day.id)}
+                  className={`px-6 py-3 sm:py-4 rounded-2xl text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-300 relative shadow-sm flex flex-col items-center gap-1 ${isActive
+                    ? "text-brand-white bg-brand-blue-dark scale-105"
+                    : "text-brand-text-dark bg-brand-white hover:bg-brand-blue-light/5 border border-brand-blue-light/10 hover:scale-105 hover:shadow-md"
+                    }`}
+                >
+                  <span className="relative z-10">{day.label}</span>
+                  <span className="block text-[10px] sm:text-xs opacity-70 relative z-10 font-medium normal-case">
+                    {day.date}
+                  </span>
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeDayBg"
+                      className="absolute inset-0 bg-brand-blue-dark rounded-2xl -z-0 shadow-lg shadow-brand-blue-dark/20"
+                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    />
+                  )}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Time Filter Dropdown */}
+          <div className="flex items-center gap-3">
+            <span className="text-sm font-semibold text-brand-blue-dark">Filter by Time:</span>
+            <select
+              value={selectedTime}
+              onChange={(e) => setSelectedTime(e.target.value)}
+              className="px-4 py-2 rounded-xl text-sm font-medium border border-brand-blue-light/20 bg-brand-white text-brand-text-dark focus:outline-none focus:ring-2 focus:ring-brand-orange/50 transition-all shadow-sm"
+            >
+              <option value="All">All Times</option>
+              {uniqueTimes.map((time, idx) => (
+                <option key={idx} value={time}>{time}</option>
+              ))}
+            </select>
+          </div>
         </div>
 
         {/* Timeline Container */}
@@ -414,7 +447,7 @@ export default function Rundown() {
           {/* Sessions List */}
           <div className="space-y-8 md:space-y-12">
             <AnimatePresence mode="wait">
-              {activeSessions.map((session, index) => {
+              {filteredSessions.map((session, index) => {
                 const SessionIcon = session.icon;
                 const isEven = index % 2 === 0;
 
