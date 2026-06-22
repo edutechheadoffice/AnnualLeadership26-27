@@ -89,7 +89,7 @@ export default function Venue() {
 
             <div className="mt-8 border-t border-brand-blue-light/10 pt-6">
               <a
-                href="https://maps.app.goo.gl/uXpS3YgqQ6MubY1q6"
+                href="https://maps.app.goo.gl/hrqLH87Uvf64Lu9dA"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 bg-brand-blue-dark hover:bg-brand-blue text-brand-white py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-colors duration-300"
@@ -112,7 +112,7 @@ export default function Venue() {
             <div className="absolute inset-0 border border-brand-white/20 rounded-3xl pointer-events-none z-10" />
 
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.8624647313885!2d106.72147367469733!3d-6.14917459383778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f8072049c303%3A0xe96c4b267155bbad!2sSekolah%20Dian%20Harapan%20Daan%20Mogot!5e0!3m2!1sen!2sid!4v1717056000000!5m2!1sen!2sid"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7933.748615917293!2d106.70491467676723!3d-6.1475786938394394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f94c24cb3ee1%3A0xd310d468fe9196b9!2sSekolah%20Dian%20Harapan%20Daan%20Mogot!5e0!3m2!1sen!2sid!4v1782114428156!5m2!1sen!2sid"
               className="w-full h-full border-0 rounded-3xl grayscale-[20%] contrast-[110%] group-hover:grayscale-0 transition-all duration-500"
               allowFullScreen={true}
               loading="lazy"

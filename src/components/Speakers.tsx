@@ -150,7 +150,7 @@ export const day3Speakers: Speaker[] = [
     jobTitle: "Head of School of SDH Cikarang",
     topic: "Learning from Each Other — School Stories That Inspire",
     role: "Speaker",
-    imageUrl: "",
+    imageUrl: "WhatsApp Image 2026-06-22 at 14.08.12.jpeg",
     flipHorizontal: true,
   },
   {
