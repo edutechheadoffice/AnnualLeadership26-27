@@ -446,8 +446,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
         </motion.div>
       </div>
 
-      {/* ── Animated captions ── */}
-      <CaptionSequence />
+
 
       {/* ── Bottom decorative strip — brand colors ── */}
       <div className="absolute bottom-0 left-0 right-0 z-40">
