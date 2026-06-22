@@ -44,7 +44,6 @@ export default function Home() {
             {/* Content Sections Wrapper */}
             <main className="flex-grow">
               <Hero />
-              <AffiliatedSchools />
               <Invitation />
               <Speakers />
               <Rundown />
