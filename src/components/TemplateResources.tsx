@@ -39,7 +39,18 @@ export default function TemplateResources() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-brand-orange text-white font-bold uppercase tracking-wider rounded-full hover:bg-brand-orange/90 hover:shadow-lg hover:shadow-brand-orange/20 transition-all duration-300 group"
             >
-              <span>Download </span>
+              <span>KPI Casecade</span>
+              <Download className="w-5 h-5 group-hover:-translate-y-1 group-hover:scale-110 transition-transform duration-300" />
+            </a>
+          </div>
+          <div className="shrink-0">
+            <a
+              href="https://ypph.sharepoint.com/:x:/s/InternalHeadofOffice/IQBkhZgrdjDXQ79Qa87l9ZPIAavsuyI3-4jHO-b8F0mjtNM?e=ilhtLs"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-brand-orange text-white font-bold uppercase tracking-wider rounded-full hover:bg-brand-orange/90 hover:shadow-lg hover:shadow-brand-orange/20 transition-all duration-300 group"
+            >
+              <span>SI Charter</span>
               <Download className="w-5 h-5 group-hover:-translate-y-1 group-hover:scale-110 transition-transform duration-300" />
             </a>
           </div>

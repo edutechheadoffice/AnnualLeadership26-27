@@ -289,6 +289,16 @@ const day3Sessions: Session[] = [
   {
     time: "10:45 - 11:45",
     title: "Professional Presence & School Community Standards",
+    people: [
+      {
+        name: "Heinz Pearly Wokaz",
+        role: "Speaker"
+      },
+      {
+        name: "Stephani Caroline Olua",
+        role: "Speaker"
+      }
+    ],
     icon: BookOpen
   },
   {
