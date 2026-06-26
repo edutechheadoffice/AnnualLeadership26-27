@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Shirt, Briefcase, Info, Laptop, Badge } from "lucide-react";
+import { Shirt, Briefcase, Info, Laptop, Badge, IdCardLanyard } from "lucide-react";
 
 export default function EventGuidelines() {
   return (
@@ -109,7 +109,7 @@ export default function EventGuidelines() {
               {/* Mid: Lanyard */}
               <div className="bg-brand-white rounded-3xl p-6 sm:p-8 border border-brand-blue-light/10 shadow-sm hover:shadow-xl hover:shadow-brand-blue/5 transition-all duration-300 flex flex-col h-full group">
                 <div className="w-16 h-16 rounded-2xl bg-brand-blue-light/10 flex items-center justify-center mb-6 group-hover:bg-brand-blue-light transition-colors">
-                  <Badge className="w-8 h-8 text-brand-blue-light group-hover:text-brand-white transition-colors" />
+                  <IdCardLanyard className="w-8 h-8 text-brand-blue-light group-hover:text-brand-white transition-colors" />
                 </div>
                 <h5 className="font-bold text-brand-text-dark text-xl mb-4">Lanyard</h5>
                 <p className="text-brand-text-muted leading-relaxed">

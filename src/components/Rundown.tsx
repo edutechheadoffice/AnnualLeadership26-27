@@ -187,12 +187,8 @@ const day2Sessions: Session[] = [
     title: "KPI as Mission Narrative (5 Chapters)",
     people: [
       {
-        name: "Alvin Wijaya",
+        name: "Wilik Chen",
         role: "Speaker"
-      },
-      {
-        name: "Head of Departments",
-        role: "Facilitators"
       }
     ],
     icon: Users
@@ -251,6 +247,10 @@ const day3Sessions: Session[] = [
     time: "08:30 - 09:30",
     title: "Learning from Each Other— School Stories That Inspire",
     people: [
+      {
+        name: "Wilik Chen",
+        role: "Moderator"
+      },
       {
         name: "Aditya Wiranata Sapang",
         role: "Speaker"
