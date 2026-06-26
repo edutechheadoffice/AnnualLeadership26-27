@@ -20,14 +20,13 @@ export interface Speaker {
 export const day1Speakers: Speaker[] = [
   {
     id: "d1-1",
-    name: "Pdt. Deddy Simanjuntak",
-    jobTitle: "Pastor of Christ Chapel Sentani",
+    name: "Pdt. Williem Ferdinandus",
+    jobTitle: "Pastor of Christ Chapel Manado",
     topic: "A Community of Servants Called to Lead (Mark 10:43-35)",
     role: "Preacher",
     label: "Opening Service",
-    imageUrl: "https://christchapelkarawaci.org/wp-content/uploads/2025/02/DS2-scaled.jpg",
+    imageUrl: "Ps.-Williem-Ferdinandus-2048x2048.webp",
     imagePosition: "top",
-    flipHorizontal: true,
   }
   ,
   {
@@ -40,11 +39,11 @@ export const day1Speakers: Speaker[] = [
   },
   {
     id: "d1-3",
-    name: "Rev. Dr. Yohanes Halim",
-    jobTitle: "Senior Pastor of Christ Chapel Karawaci",
+    name: "Heri Yulianto",
+    jobTitle: "CCK Ruling Elder & UPH Spiritual Formation",
     topic: "Interactive Biblical Exposition: What Does It Mean to Be Alive in Christ?",
     role: "Speaker",
-    imageUrl: "YH2-scaled.jpg",
+    imageUrl: "https://www.uph.edu/wp-content/uploads/2023/08/Heri-Yulianto-1024x1024.jpg?x78467",
     flipHorizontal: true,
   },
   {
@@ -119,12 +118,12 @@ export const day2Speakers: Speaker[] = [
 export const day3Speakers: Speaker[] = [
   {
     id: "d3-1",
-    name: "Pdt. Williem Ferdinandus",
-    jobTitle: "Senior Pastor of Christ Chapel Manado",
+    name: "Grace Purnamasari Christian",
+    jobTitle: "SDH Academic - PDCE Biblical Studies",
     label: "Devotion",
     topic: "We Are Unworthy Servants — Soli Deo Gloria (Luke 17:10)",
     role: "Preacher",
-    imageUrl: "Ps.-Williem-Ferdinandus-2048x2048.webp",
+    imageUrl: "https://www.uph.edu/wp-content/uploads/2024/08/Grace-Purnamasari-Christian-S.Th_.-M.Div_.jpg?x78467",
   },
   {
     id: "d3-2",
@@ -141,8 +140,8 @@ export const day3Speakers: Speaker[] = [
     jobTitle: "Principal Coordinator of SDH Sentul",
     topic: "Learning from Each Other — School Stories That Inspire",
     role: "Speaker",
-    imageUrl: "https://media.licdn.com/dms/image/v2/C5603AQGpiedsd4e3AA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1615163342710?e=1783555200&v=beta&t=mTuZc0YjNWIUhvk0_U4snasRrJSt7SftXi7EIVZCbTg",
-    flipHorizontal: true,
+    imageUrl: "WhatsApp Image 2026-06-26 at 09.54.34.jpeg",
+    imagePosition: "30% 100%"
   },
   {
     id: "d3-4",

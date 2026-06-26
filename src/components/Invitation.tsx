@@ -40,8 +40,6 @@ export default function Invitation() {
           </h2>
           <p className="text-lg text-brand-text-muted max-w-3xl mx-auto leading-relaxed">
             A meaningful occasion to inspire, strengthen, and equip one another in proclaiming Christ and impacting the life of every learner.
-
-            Further details on keynote speakers, session schedules, and engaging activities will be announced soon.
           </p>
         </motion.div>
 

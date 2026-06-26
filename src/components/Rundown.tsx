@@ -40,7 +40,7 @@ const day1Sessions: Session[] = [
         role: "Liturgist"
       },
       {
-        name: "Pdt. Deddy Simanjuntak",
+        name: "Pdt. Williem Ferdinandus",
         role: "Preacher"
       }
     ],
@@ -96,7 +96,7 @@ const day1Sessions: Session[] = [
     title: "School Theme Exposition & Application — Alive in Christ Second Cycle: Faith in Christ | Colossians 2:13-14",
     people: [
       {
-        name: "Part 1: Rev. Dr. Yohanes Halim",
+        name: "Part 1: Heri Yulianto",
         role: "Speaker"
       },
       {
@@ -209,10 +209,6 @@ const day2Sessions: Session[] = [
       {
         name: "Wilik Chen",
         role: "Facilitators"
-      },
-      {
-        name: "Alvin Wijaya",
-        role: "Facilitators"
       }
     ],
     icon: Users
@@ -245,7 +241,7 @@ const day3Sessions: Session[] = [
     title: "We Are Unworthy Servants — Soli Deo Gloria (Luke 17:10)",
     people: [
       {
-        name: "Pdt. Williem Ferdinandus",
+        name: "Grace Purnamasari Christian",
         role: "Preacher"
       }
     ],
