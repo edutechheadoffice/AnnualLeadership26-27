@@ -40,7 +40,7 @@ export const day1Speakers: Speaker[] = [
   {
     id: "d1-3",
     name: "Heri Yulianto",
-    jobTitle: "CCK Ruling Elder & UPH Spiritual Formation",
+    jobTitle: "Ruling Elder of Christ Chapel Karawaci",
     topic: "Interactive Biblical Exposition: What Does It Mean to Be Alive in Christ?",
     role: "Speaker",
     imageUrl: "https://www.uph.edu/wp-content/uploads/2023/08/Heri-Yulianto-1024x1024.jpg?x78467",

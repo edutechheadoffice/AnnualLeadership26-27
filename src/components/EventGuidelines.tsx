@@ -92,7 +92,7 @@ export default function EventGuidelines() {
                   <div className="flex items-center gap-4 group/item">
                     <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden bg-white shrink-0 border border-brand-blue-light/10 shadow-sm group-hover/item:shadow-md transition-all">
                       <Image
-                        src="/images/smart-casual.png"
+                        src="/raker-smart.png"
                         alt="Smart Casual"
                         fill
                         className="object-contain p-2 group-hover/item:scale-110 transition-transform duration-300"
