@@ -106,12 +106,13 @@ export const day2Speakers: Speaker[] = [
   },
   {
     id: "d2-4",
-    name: "Alvin Wijaya",
-    jobTitle: "School System Coordinator of SDH",
+    name: "Wilik Chen",
+    jobTitle: "Vice Executive Director of Cluster 2",
     topic: "KPI as Mission Narrative\n & KPI Exploration & School Action Planning — From Understanding to Ownership",
     role: "Speaker",
-    imageUrl: "DSC09339.jpg",
+    imageUrl: "HoS DM Wilik_edited_edited.avif",
     imagePosition: "top",
+    flipHorizontal: true,
   }
 ];
 
@@ -124,6 +125,7 @@ export const day3Speakers: Speaker[] = [
     topic: "We Are Unworthy Servants — Soli Deo Gloria (Luke 17:10)",
     role: "Preacher",
     imageUrl: "https://www.uph.edu/wp-content/uploads/2024/08/Grace-Purnamasari-Christian-S.Th_.-M.Div_.jpg?x78467",
+    flipHorizontal: true,
   },
   {
     id: "d3-2",
@@ -182,6 +184,18 @@ export const day3Speakers: Speaker[] = [
     role: "Speaker",
     imageUrl: "DSC09339.jpg",
     imagePosition: "top",
+  }
+  ,
+  {
+    id: "d3-9",
+    name: "Wilik Chen",
+    jobTitle: "Vice Executive Director of Cluster 2",
+    label: "Info & Updates",
+    topic: "Information & Updates: T&S Handbook, NTI/RTI, Lumina, and Operational Updates",
+    role: "Speaker",
+    imageUrl: "HoS DM Wilik_edited_edited.avif",
+    imagePosition: "top",
+    flipHorizontal: true,
   }
 ];
 

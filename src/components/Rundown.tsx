@@ -324,6 +324,10 @@ const day3Sessions: Session[] = [
       {
         name: "Alvin Wijaya",
         role: "Speaker"
+      },
+      {
+        name: "Wilik Chen",
+        role: "Spekaer"
       }
     ],
     icon: BookOpen

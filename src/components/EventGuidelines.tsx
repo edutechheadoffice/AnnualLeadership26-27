@@ -28,7 +28,7 @@ export default function EventGuidelines() {
             transition={{ delay: 0.1 }}
             className="text-3xl sm:text-5xl font-bebas text-brand-blue-dark tracking-wide uppercase mt-2 text-shadow-soft"
           >
-            Event Guidelines
+            Event Essentials
           </motion.h3>
           <div className="w-12 h-1 bg-brand-orange mt-4 rounded-full" />
         </div>
@@ -42,13 +42,6 @@ export default function EventGuidelines() {
             className="bg-brand-cream/80 backdrop-blur-sm border border-brand-blue-light/10 p-8 sm:p-12 rounded-[2.5rem] shadow-sm relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-orange/5 rounded-full blur-[80px] pointer-events-none translate-x-1/3 -translate-y-1/3" />
-
-            <div className="flex flex-col items-center text-center mb-12 relative z-10">
-              <h4 className="text-3xl sm:text-4xl font-bebas text-brand-blue-dark tracking-wide">
-                Event Essentials
-              </h4>
-              <div className="w-12 h-1 bg-brand-orange mt-4 rounded-full" />
-            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 relative z-10">
               {/* Left: Dress Code */}
