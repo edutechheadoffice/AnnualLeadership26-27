@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Clock, Calendar, MapPin, Sparkles, Ticket, ArrowRight } from "lucide-react";
+import { Calendar, MapPin, Sparkles, Ticket } from "lucide-react";
 
 export default function Invitation() {
   return (
@@ -91,27 +91,6 @@ export default function Invitation() {
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Dashed Line Separator for Light Theme */}
-            <div className="hidden md:flex flex-col items-center justify-center relative w-12 bg-white/40 border-l border-r border-brand-blue-light/5">
-              <div className="absolute -top-6 w-12 h-12 bg-brand-white rounded-full shadow-inner" />
-              <div className="h-full w-px border-l-2 border-dashed border-brand-blue-light/20" />
-              <div className="absolute -bottom-6 w-12 h-12 bg-brand-white rounded-full shadow-inner" />
-            </div>
-
-            {/* Right Side: Stay Tuned */}
-            <div className="md:w-1/3 p-8 sm:p-10 flex flex-col justify-center items-center text-center bg-gradient-to-bl from-brand-yellow-bright/10 to-transparent">
-              <div className="w-20 h-20 rounded-full bg-white border border-brand-yellow/30 shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-md transition-all duration-500">
-                <Clock className="w-8 h-8 text-brand-orange" />
-              </div>
-              <h4 className="text-2xl font-bebas tracking-wide text-brand-blue-dark mb-4">
-                Details<br />Coming Soon
-              </h4>
-              <button className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-brand-blue hover:text-brand-orange transition-colors duration-300">
-                Stay Tuned
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
             </div>
 
           </div>
