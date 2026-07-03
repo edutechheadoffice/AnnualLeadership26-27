@@ -154,7 +154,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-lg sm:text-2xl font-semibold tracking-[0.3em] uppercase text-brand-text-muted max-w-2xl leading-relaxed mt-2"
           >
-            Alive in Christ <span className="block text-brand-orange">•</span> Collosians 2:3-14
+            Alive in Christ <span className="block text-brand-orange">•</span> Colossians 2:3-14
           </motion.p>
 
           {/* Location & Date Details in Pills */}

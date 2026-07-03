@@ -291,7 +291,7 @@ const day3Sessions: Session[] = [
     title: "Professional Presence & School Community Standards",
     people: [
       {
-        name: "Heinz Pearly Wokaz",
+        name: "Heinz Pearly Wokas",
         role: "Speaker"
       },
       {

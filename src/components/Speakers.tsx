@@ -156,13 +156,14 @@ export const day3Speakers: Speaker[] = [
   },
   {
     id: "d3-6",
-    name: "Heinz Pearly Wokaz",
+    name: "Heinz Pearly Wokas",
     jobTitle: "Head of School of SDH Holland Village",
     label: "Topic",
     topic: "Professional Presence & School Community Standards",
     role: "Speaker",
-    imageUrl: "https://media.licdn.com/dms/image/v2/D5603AQHgpydzL3WDGg/profile-displayphoto-shrink_800_800/B56ZeNzvCmGQAk-/0/1750430850926?e=1784160000&v=beta&t=d6EsffHtbNKON5oE6n0lJC3FNWey7lxuRmgF9ADFRY4",
-    imagePosition: "top",
+    imageUrl: "/images/WhatsApp Image 2026-07-03 at 16.39.23.jpeg",
+    imagePosition: "50% 40%",
+    imageScale: 1.5,
     flipHorizontal: true,
   },
   {
