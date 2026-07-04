@@ -234,7 +234,7 @@ const day3Sessions: Session[] = [
   },
   {
     time: "08:00 - 08:30",
-    title: "We Are Unworthy Servants — Soli Deo Gloria (Luke 17:10)",
+    title: "We Are Unworthy Servants — Soli Deo Gloria (Luke 10:17-20)",
     people: [
       {
         name: "Grace Purnamasari Christian",
