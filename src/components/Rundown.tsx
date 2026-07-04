@@ -55,7 +55,7 @@ const day1Sessions: Session[] = [
         role: "Speaker"
       },
       {
-        name: "Deny Kiswanto Sinaga",
+        name: "Deny Kiswanto Sinaga, M.Ed",
         role: "Speaker"
       }
     ],
@@ -76,11 +76,11 @@ const day1Sessions: Session[] = [
     title: "Table Talk: Guarding the Mission While Growing the Movement",
     people: [
       {
-        name: "Wilik Chen",
+        name: "Wilik, M.Pd",
         role: "Facilitator"
       },
       {
-        name: "Alvin Wijaya",
+        name: "Alvin Wijaya, M.Ed",
         role: "Facilitator"
       }
     ],
@@ -100,11 +100,11 @@ const day1Sessions: Session[] = [
         role: "Speaker"
       },
       {
-        name: "Part 2: Wilik Chen",
+        name: "Part 2: Wilik, M.Pd",
         role: "Speaker"
       },
       {
-        name: "Part 3: Alvin Wijaya",
+        name: "Part 3: Alvin Wijaya, M.Ed",
         role: "Speaker"
       }
     ],
@@ -176,7 +176,7 @@ const day2Sessions: Session[] = [
     title: "SDH Growth Map — 3-Year Growth Trajectory",
     people: [
       {
-        name: "Deny Kiswanto Sinaga",
+        name: "Deny Kiswanto Sinaga, M.Ed",
         role: "Speaker"
       }
     ],
@@ -187,7 +187,7 @@ const day2Sessions: Session[] = [
     title: "KPI as Mission Narrative (5 Chapters)",
     people: [
       {
-        name: "Wilik Chen",
+        name: "Wilik, M.Pd",
         role: "Speaker"
       }
     ],
@@ -203,7 +203,7 @@ const day2Sessions: Session[] = [
     title: "KPI Exploration & School Action Planning — From Understanding to Ownership",
     people: [
       {
-        name: "Wilik Chen",
+        name: "Wilik, M.Pd",
         role: "Facilitators"
       }
     ],
@@ -248,7 +248,7 @@ const day3Sessions: Session[] = [
     title: "Learning from Each Other— School Stories That Inspire",
     people: [
       {
-        name: "Wilik Chen",
+        name: "Wilik, M.Pd",
         role: "Moderator"
       },
       {
@@ -276,11 +276,11 @@ const day3Sessions: Session[] = [
     title: "School Action Plan Workshop — Finalize, Sharpen, Commit",
     people: [
       {
-        name: "Wilik Chen",
+        name: "Wilik, M.Pd",
         role: "Facilitators"
       },
       {
-        name: "Alvin Wijaya",
+        name: "Alvin Wijaya, M.Ed",
         role: "Facilitators"
       }
     ],
@@ -322,11 +322,11 @@ const day3Sessions: Session[] = [
     title: "Information & Updates: T&S Handbook, NTI/RTI, Lumina, and Operational Updates",
     people: [
       {
-        name: "Alvin Wijaya",
+        name: "Alvin Wijaya, M.Ed",
         role: "Speaker"
       },
       {
-        name: "Wilik Chen",
+        name: "Wilik Chen, M.Pd",
         role: "Spekaer"
       }
     ],
@@ -337,7 +337,7 @@ const day3Sessions: Session[] = [
     title: "Closing Worship: Soli Deo Gloria",
     people: [
       {
-        name: "Deny Kiswanto Sinaga",
+        name: "Deny Kiswanto Sinaga, M.Ed",
         role: "Speaker"
       }
     ],
