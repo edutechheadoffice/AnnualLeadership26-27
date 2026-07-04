@@ -57,7 +57,7 @@ export const day1Speakers: Speaker[] = [
   },
   {
     id: "d1-5",
-    name: "Wilik, M.Ed",
+    name: "Wilik, M.Pd",
     jobTitle: "Vice Executive Director of SDH",
     topic: "Application Workshop: Where Does the Theme Live in Our Schools?",
     role: "Speaker",
@@ -106,7 +106,7 @@ export const day2Speakers: Speaker[] = [
   },
   {
     id: "d2-4",
-    name: "Wilik, M.Ed",
+    name: "Wilik, M.Pd",
     jobTitle: "Vice Executive Director of SDH",
     topic: "KPI as Mission Narrative\n & KPI Exploration & School Action Planning — From Understanding to Ownership",
     role: "Speaker",
@@ -190,7 +190,7 @@ export const day3Speakers: Speaker[] = [
   ,
   {
     id: "d3-9",
-    name: "Wilik, M.Ed",
+    name: "Wilik, M.Pd",
     jobTitle: "Vice Executive Director of SDH",
     label: "Info & Updates",
     topic: "Information & Updates: T&S Handbook, NTI/RTI, Lumina, and Operational Updates",
