@@ -22,7 +22,7 @@ export const day1Speakers: Speaker[] = [
     id: "d1-1",
     name: "Pdt. Williem Ferdinandus",
     jobTitle: "Pastor of Christ Chapel Manado",
-    topic: "A Community of Servants Called to Lead (Mark 10:43-35)",
+    topic: "A Community of Servants Called to Lead (Mark 10:34-35)",
     role: "Preacher",
     label: "Opening Service",
     imageUrl: "Ps.-Williem-Ferdinandus-2048x2048.webp",
@@ -61,7 +61,7 @@ export const day1Speakers: Speaker[] = [
     jobTitle: "Vice Executive Director of SDH",
     topic: "Application Workshop: Where Does the Theme Live in Our Schools?",
     role: "Speaker",
-    imageUrl: "HoS DM Wilik_edited_edited.avif",
+    imageUrl: "DSC04520.jpg.png",
     imagePosition: "top",
     flipHorizontal: true,
   },
@@ -110,7 +110,7 @@ export const day2Speakers: Speaker[] = [
     jobTitle: "Vice Executive Director of SDH",
     topic: "KPI as Mission Narrative\n & KPI Exploration & School Action Planning — From Understanding to Ownership",
     role: "Speaker",
-    imageUrl: "HoS DM Wilik_edited_edited.avif",
+    imageUrl: "DSC04520.jpg.png",
     imagePosition: "top",
     flipHorizontal: true,
   }
@@ -173,8 +173,9 @@ export const day3Speakers: Speaker[] = [
     label: "Topic",
     topic: "Professional Presence & School Community Standards",
     role: "Speaker",
-    imageUrl: "DSC06247.jpg",
+    imageUrl: "DSC06715.jpg.png",
     imagePosition: "top",
+    imageScale: 1.2
   },
   {
     id: "d3-8",
@@ -194,7 +195,7 @@ export const day3Speakers: Speaker[] = [
     label: "Info & Updates",
     topic: "Information & Updates: T&S Handbook, NTI/RTI, Lumina, and Operational Updates",
     role: "Speaker",
-    imageUrl: "HoS DM Wilik_edited_edited.avif",
+    imageUrl: "DSC04520.jpg.png",
     imagePosition: "top",
     flipHorizontal: true,
   }
