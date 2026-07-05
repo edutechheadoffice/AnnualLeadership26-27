@@ -29,14 +29,7 @@ export const day1Speakers: Speaker[] = [
     imagePosition: "top",
   }
   ,
-  {
-    id: "d1-2",
-    name: "dr. Stephanie Riady",
-    jobTitle: "President of Pelita Harapan Group",
-    topic: "Faithful Leadership for a Growing Mission: PHG & SDH: Where We Stand, Where We Are Going, What We Will and Will Not Pursue",
-    role: "Speaker",
-    imageUrl: "1712070861955.jpeg",
-  },
+
   {
     id: "d1-3",
     name: "Heri Yulianto",
@@ -47,10 +40,10 @@ export const day1Speakers: Speaker[] = [
     flipHorizontal: true,
   },
   {
-    id: "d1-4",
+    id: "d1-2",
     name: "Deny Kiswanto Sinaga, M.Ed",
     jobTitle: "Director of Enrollment & New School Initiative",
-    topic: "Faithful Leadership for a Growing Mission: PHG & SDH: Where We Stand, Where We Are Going, What We Will and Will Not Pursue",
+    topic: "Growing Faithfully Together: Collective Leadership for Christ-Centered & Sustainable Growth",
     role: "Speaker",
     imageUrl: "DSC09905-HD.jpg",
     imagePosition: "top", // diatur atas
@@ -129,6 +122,14 @@ export const day3Speakers: Speaker[] = [
   },
   {
     id: "d3-2",
+    name: "dr. Stephanie Riady",
+    jobTitle: "President of Pelita Harapan Group",
+    topic: "Faithful Leadership for a Growing Mission: PHG & SDH: Where We Stand, Where We Are Going, What We Will and Will Not Pursue",
+    role: "Speaker",
+    imageUrl: "1712070861955.jpeg",
+  },
+  {
+    id: "d3-3",
     name: "Rifena Kurniawan",
     jobTitle: "Acting Head of School of SDH Lippo Village",
     topic: "Learning from Each Other — School Stories That Inspire",
@@ -137,7 +138,7 @@ export const day3Speakers: Speaker[] = [
     flipHorizontal: true,
   },
   {
-    id: "d3-3",
+    id: "d3-4",
     name: "Aditya Wiranata Sapang",
     jobTitle: "Principal Coordinator of SDH Sentul",
     topic: "Learning from Each Other — School Stories That Inspire",
@@ -146,7 +147,7 @@ export const day3Speakers: Speaker[] = [
     imagePosition: "30% 100%"
   },
   {
-    id: "d3-4",
+    id: "d3-5",
     name: "Nathanael Febrian",
     jobTitle: "Head of School of SDH Cikarang",
     topic: "Learning from Each Other — School Stories That Inspire",

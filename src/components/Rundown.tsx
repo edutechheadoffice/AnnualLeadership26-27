@@ -47,13 +47,9 @@ const day1Sessions: Session[] = [
     icon: Church
   },
   {
-    time: "09:15 - 10:15",
-    title: "Faithful Leadership for a Growing Mission: PHG & SDH: Where We Stand, Where We Are Going, What We Will and Will Not Pursue",
+    time: "09:15 - 10:00",
+    title: "Growing Faithfully Together: Collective Leadership for Christ-Centered & Sustainable Growth",
     people: [
-      {
-        name: "Dr. Stephanie Riady",
-        role: "Speaker"
-      },
       {
         name: "Deny Kiswanto Sinaga, M.Ed",
         role: "Speaker"
@@ -62,23 +58,14 @@ const day1Sessions: Session[] = [
     icon: Church
   },
   {
-    time: "10:15 - 10:25",
+    time: "10:00 - 10:20",
     title: "Photo Session",
     icon: Camera
   },
   {
-    time: "10:25 - 10:45",
-    title: "Coffee Break",
-    icon: Coffee
-  },
-  {
-    time: "10:45 - 12:00",
+    time: "10:20 - 11:50",
     title: "Table Talk: Guarding the Mission While Growing the Movement",
     people: [
-      {
-        name: "Wilik, M.Pd",
-        role: "Facilitator"
-      },
       {
         name: "Alvin Wijaya, M.Ed",
         role: "Facilitator"
@@ -87,12 +74,12 @@ const day1Sessions: Session[] = [
     icon: Users
   },
   {
-    time: "12:00 - 13:00",
+    time: "11:50 - 12:50",
     title: "Lunch Break",
     icon: Soup
   },
   {
-    time: "13:00 - 14:30",
+    time: "12:50 - 14:20",
     title: "School Theme Exposition & Application — Alive in Christ Second Cycle: Faith in Christ | Colossians 2:13-14",
     people: [
       {
@@ -100,18 +87,14 @@ const day1Sessions: Session[] = [
         role: "Speaker"
       },
       {
-        name: "Part 2: Wilik, M.Pd",
-        role: "Speaker"
-      },
-      {
-        name: "Part 3: Alvin Wijaya, M.Ed",
+        name: "Part 2 & Part 3: Wilik, M.Pd",
         role: "Speaker"
       }
     ],
     icon: Compass
   },
   {
-    time: "14:30 - 15:00",
+    time: "14:20 - 15:00",
     title: "Reflective Prayer & Quite Time",
     people: [
       {
@@ -244,7 +227,7 @@ const day3Sessions: Session[] = [
     icon: BookOpen
   },
   {
-    time: "08:30 - 09:30",
+    time: "08:30 - 09:40",
     title: "Learning from Each Other— School Stories That Inspire",
     people: [
       {
@@ -267,27 +250,23 @@ const day3Sessions: Session[] = [
     icon: BookOpen
   },
   {
-    time: "09:30 - 09:45",
+    time: "09:40 - 10:00",
     title: "Coffee Break",
     icon: Coffee
   },
   {
-    time: "09:45 - 10:45",
-    title: "School Action Plan Workshop — Finalize, Sharpen, Commit",
+    time: "10:00 - 10:30",
+    title: "Faithful Leadership for a Growing Mission: PHG & SDH: Where We Stand, Where We Are Going, What We Will and Will Not Pursue",
     people: [
       {
-        name: "Wilik, M.Pd",
-        role: "Facilitators"
-      },
-      {
-        name: "Alvin Wijaya, M.Ed",
-        role: "Facilitators"
+        name: "Dr. Stephanie Riady",
+        role: "Speaker"
       }
     ],
     icon: BookOpen
   },
   {
-    time: "10:45 - 11:45",
+    time: "10:30 - 11:30",
     title: "Professional Presence & School Community Standards",
     people: [
       {
@@ -302,12 +281,12 @@ const day3Sessions: Session[] = [
     icon: BookOpen
   },
   {
-    time: "11:45 - 12:45",
+    time: "11:30 - 13:30",
     title: "Lunch Break",
     icon: Soup
   },
   {
-    time: "12:45 - 13:45",
+    time: "13:30 - 14:15",
     title: "Info Session: Universitas Pelita Harapan",
     people: [
       {
@@ -318,7 +297,7 @@ const day3Sessions: Session[] = [
     icon: BookOpen
   },
   {
-    time: "13:45 - 14:15",
+    time: "14:15 - 15:00",
     title: "Information & Updates: T&S Handbook, NTI/RTI, Lumina, and Operational Updates",
     people: [
       {
