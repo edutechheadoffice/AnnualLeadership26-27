@@ -256,7 +256,7 @@ const day3Sessions: Session[] = [
   },
   {
     time: "10:00 - 10:30",
-    title: "Faithful Leadership for a Growing Mission: PHG & SDH: Where We Stand, Where We Are Going, What We Will and Will Not Pursue",
+    title: "Faithful Advancing the Mission: Vision, Mission & Strategic Priorities for the Future",
     people: [
       {
         name: "Dr. Stephanie Riady",
