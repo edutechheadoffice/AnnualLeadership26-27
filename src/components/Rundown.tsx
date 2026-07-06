@@ -172,6 +172,10 @@ const day2Sessions: Session[] = [
       {
         name: "Wilik, M.Pd",
         role: "Speaker"
+      },
+      {
+        name: "Alvin Wijaya, M.Ed",
+        role: "Speaker"
       }
     ],
     icon: Users
