@@ -260,7 +260,7 @@ const day3Sessions: Session[] = [
   },
   {
     time: "10:00 - 10:30",
-    title: "Faithful Advancing the Mission: Vision, Mission & Strategic Priorities for the Future",
+    title: "Vision & Strategic Direction of Pelita Harapan Group",
     people: [
       {
         name: "Dr. Stephanie Riady",

@@ -124,7 +124,7 @@ export const day3Speakers: Speaker[] = [
     id: "d3-2",
     name: "dr. Stephanie Riady",
     jobTitle: "President of Pelita Harapan Group",
-    topic: "Faithful Advancing the Mission: Vision, Mission & Strategic Priorities for the Future",
+    topic: "Vision & Strategic Direction of Pelita Harapan Group",
     role: "Speaker",
     imageUrl: "1712070861955.jpeg",
   },
