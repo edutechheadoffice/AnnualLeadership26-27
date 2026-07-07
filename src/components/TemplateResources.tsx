@@ -162,7 +162,7 @@ export default function TemplateResources() {
 
           <div className="shrink-0">
             <a
-              href="https://teams.microsoft.com/meet/4820714941933?p=ACsGXVgGvTqCTdP7oX"
+              href="https://ypph.sharepoint.com/sites/SDHLeaders/Lists/SI%20Charter%20for%202627/AllItems.aspx"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-brand-orange text-white font-bold uppercase tracking-wider rounded-full hover:bg-brand-orange/90 hover:shadow-lg hover:shadow-brand-orange/20 transition-all duration-300 group"
